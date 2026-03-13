@@ -91,14 +91,14 @@ export function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-sm bg-white dark:bg-slate-950">
+            <SheetContent side="right" className="w-full max-w-sm bg-white dark:bg-slate-950 p-0">
               {/* Navigation Links */}
-              <nav className="flex flex-col gap-1 mt-4">
+              <nav className="flex flex-col gap-1 p-6">
                 {navLinks.map((link) => (
                   <button
                     key={link.href}
                     onClick={() => scrollToSection(link.href)}
-                    className="flex items-center px-4 py-3 text-left rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="flex items-center px-4 py-3 text-left rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
                   >
                     {link.label}
                   </button>
@@ -106,7 +106,7 @@ export function Header() {
               </nav>
 
               {/* CTA Button */}
-              <div className="mt-6 pt-6 border-t border-slate-200 dark:border-slate-800">
+              <div className="px-6 pb-6 pt-2 border-t border-slate-200 dark:border-slate-800">
                 <Button
                   className="w-full cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 rounded-xl py-6 text-base font-medium"
                   onClick={() => scrollToSection("#contact")}
@@ -116,7 +116,7 @@ export function Header() {
               </div>
 
               {/* Theme Toggle */}
-              <div className="mt-4 flex items-center justify-center">
+              <div className="flex items-center justify-center pb-6">
                 <ThemeToggle />
               </div>
             </SheetContent>

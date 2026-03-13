@@ -7,12 +7,6 @@ import Image from "next/image";
 
 const experiences = [
   {
-    company: "PT Infinity Connection Group",
-    role: "Full-Stack Developer - Freelance",
-    period: "May 2024 – Jul 2024",
-    description: "Designed UI for applications, developed front-end and back-end",
-  },
-  {
     company: "PT Global Infotech Solution",
     role: "System Engineer L1",
     period: "Feb 2023 – May 2024",
@@ -125,7 +119,7 @@ export function AboutSection() {
             <div className="pt-4">
               <Card className="transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden group">
                 <CardContent className="p-6 text-center relative">
-                  <p className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">2+</p>
+                  <p className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">5+</p>
                   <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">Years Experience</p>
                 </CardContent>
               </Card>
@@ -168,12 +162,12 @@ export function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white text-center mb-8">
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-white text-center mb-12">
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
               Work Experience
             </span>
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.company}
@@ -181,20 +175,30 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="mb-6 last:mb-0"
               >
-                <Card className="transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-105 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-full">
+                <Card className="group transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white flex-shrink-0">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-slate-900 dark:text-white">{exp.role}</h4>
-                        <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">{exp.company}</p>
-                        <p className="text-xs text-slate-500 dark:text-slate-500 mt-1">{exp.period}</p>
-                        <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">{exp.description}</p>
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                          <div>
+                            <h4 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{exp.role}</h4>
+                            <p className="text-sm text-blue-600 dark:text-blue-400 font-medium mt-0.5">{exp.company}</p>
+                          </div>
+                          <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-full w-fit">
+                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            {exp.period}
+                          </div>
+                        </div>
+                        <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{exp.description}</p>
                       </div>
                     </div>
                   </CardContent>
