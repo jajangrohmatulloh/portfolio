@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     description: "Full-Stack Developer passionate about creating beautiful and functional web applications.",
     type: "website",
   },
+  icons: {
+    icon: "/person.webp",
+    apple: "/person.webp",
+  },
 };
 
 export default function RootLayout({
