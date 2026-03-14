@@ -5,35 +5,76 @@
       <stop offset="50%" style="stop-color:#8B5CF6"/>
       <stop offset="100%" style="stop-color:#EC4899"/>
     </linearGradient>
-    <linearGradient id="skin" x1="50%" y1="0%" x2="50%" y2="100%">
-      <stop offset="0%" style="stop-color:#FFE0B0"/>
-      <stop offset="100%" style="stop-color:#E5B880"/>
+    <radialGradient id="skin3D" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" style="stop-color:#FFEFD5"/>
+      <stop offset="50%" style="stop-color:#F5D0A8"/>
+      <stop offset="100%" style="stop-color:#E0B080"/>
+    </radialGradient>
+    <linearGradient id="hair3D" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a5a5a"/>
+      <stop offset="50%" style="stop-color:#3a3a3a"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
     </linearGradient>
+    <linearGradient id="glass3D" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA"/>
+      <stop offset="50%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#A78BFA"/>
+    </linearGradient>
+    <filter id="shadow3D" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
   </defs>
   
   <!-- Background -->
   <rect width="100" height="100" rx="20" fill="url(#bg)"/>
   
-  <!-- Hair -->
-  <circle cx="50" cy="40" r="22" fill="#2d2d2d"/>
+  <!-- Hair Back -->
+  <circle cx="50" cy="42" r="23" fill="url(#hair3D)" filter="url(#shadow3D)"/>
   
-  <!-- Face -->
-  <circle cx="50" cy="48" r="18" fill="url(#skin)"/>
+  <!-- Neck -->
+  <rect x="45" y="62" width="10" height="8" fill="#E0B080"/>
   
-  <!-- Hair bangs -->
-  <path d="M32 42 Q50 35 68 42" fill="#2d2d2d"/>
+  <!-- Shoulders -->
+  <ellipse cx="50" cy="80" rx="26" ry="12" fill="white" filter="url(#shadow3D)"/>
   
-  <!-- Eyes -->
-  <circle cx="44" cy="48" r="3" fill="#2d2d2d"/>
-  <circle cx="56" cy="48" r="3" fill="#2d2d2d"/>
-  <circle cx="45" cy="47" r="1" fill="white"/>
-  <circle cx="57" cy="47" r="1" fill="white"/>
+  <!-- Face 3D -->
+  <ellipse cx="50" cy="50" rx="20" ry="22" fill="url(#skin3D)" filter="url(#shadow3D)"/>
+  <ellipse cx="48" cy="48" rx="15" ry="17" fill="#FFEFD5" opacity="0.3"/>
   
-  <!-- Smile -->
-  <path d="M44 54 Q50 58 56 54" fill="none" stroke="#E5735A" stroke-width="2" stroke-linecap="round"/>
+  <!-- Hair Front -->
+  <path d="M30 42 Q30 25 50 25 Q70 25 70 42 Q70 36 50 36 Q30 36 30 42" fill="url(#hair3D)"/>
   
-  <!-- Glasses -->
-  <circle cx="44" cy="48" r="5" fill="none" stroke="#60A5FA" stroke-width="2"/>
-  <circle cx="56" cy="48" r="5" fill="none" stroke="#60A5FA" stroke-width="2"/>
-  <path d="M49 48 L51 48" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+  <!-- Eyes 3D -->
+  <ellipse cx="43" cy="50" rx="5" ry="5.5" fill="white" filter="url(#shadow3D)"/>
+  <ellipse cx="57" cy="50" rx="5" ry="5.5" fill="white" filter="url(#shadow3D)"/>
+  <circle cx="43" cy="50" r="3" fill="#2d2d2d"/>
+  <circle cx="57" cy="50" r="3" fill="#2d2d2d"/>
+  <circle cx="44" cy="49" r="1.2" fill="white"/>
+  <circle cx="58" cy="49" r="1.2" fill="white"/>
+  
+  <!-- Eyebrows -->
+  <path d="M39 45 Q43 43 47 45" fill="none" stroke="#3a3a3a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M53 45 Q57 43 61 45" fill="none" stroke="#3a3a3a" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Nose 3D -->
+  <ellipse cx="50" cy="56" rx="2.5" ry="1.5" fill="#E0B080" opacity="0.5"/>
+  <path d="M50 53 L49 57 Q50 58 51 57" fill="none" stroke="#D4A070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Mouth 3D -->
+  <path d="M44 62 Q50 66 56 62" fill="#E5735A" opacity="0.4"/>
+  <path d="M44 62 Q50 66 56 62" fill="none" stroke="#D96850" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Cheeks -->
+  <ellipse cx="36" cy="58" rx="3.5" ry="2" fill="#FFB6A0" opacity="0.4"/>
+  <ellipse cx="64" cy="58" rx="3.5" ry="2" fill="#FFB6A0" opacity="0.4"/>
+  
+  <!-- GLASSES 3D -->
+  <circle cx="43" cy="50" r="6.5" fill="none" stroke="url(#glass3D)" stroke-width="2.5" filter="url(#shadow3D)"/>
+  <circle cx="57" cy="50" r="6.5" fill="none" stroke="url(#glass3D)" stroke-width="2.5" filter="url(#shadow3D)"/>
+  <path d="M49 50 Q50 48 51 50" fill="none" stroke="url(#glass3D)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M36 50 L30 51" fill="none" stroke="url(#glass3D)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M64 50 L70 51" fill="none" stroke="url(#glass3D)" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Face Highlight -->
+  <ellipse cx="46" cy="46" rx="4" ry="2.5" fill="white" opacity="0.25"/>
 </svg>
