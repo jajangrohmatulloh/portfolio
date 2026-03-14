@@ -1,72 +1,95 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#3B82F6"/>
       <stop offset="50%" style="stop-color:#8B5CF6"/>
       <stop offset="100%" style="stop-color:#EC4899"/>
     </linearGradient>
-    <linearGradient id="skin3d" x1="30%" y1="30%" x2="70%" y2="70%">
-      <stop offset="0%" style="stop-color:#FFE0C0"/>
-      <stop offset="50%" style="stop-color:#F5C890"/>
-      <stop offset="100%" style="stop-color:#E0A870"/>
+    <linearGradient id="skin" x1="40%" y1="30%" x2="60%" y2="80%">
+      <stop offset="0%" style="stop-color:#FFDDB8"/>
+      <stop offset="40%" style="stop-color:#E8B888"/>
+      <stop offset="100%" style="stop-color:#D4A574"/>
     </linearGradient>
-    <linearGradient id="hair3d" x1="30%" y1="30%" x2="70%" y2="70%">
-      <stop offset="0%" style="stop-color:#4a4a4a"/>
-      <stop offset="50%" style="stop-color:#2d2d2d"/>
+    <linearGradient id="hairGrad" x1="30%" y1="20%" x2="70%" y2="90%">
+      <stop offset="0%" style="stop-color:#3a3a3a"/>
       <stop offset="100%" style="stop-color:#1a1a1a"/>
     </linearGradient>
-    <filter id="shadow3d" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    <linearGradient id="glassFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a9eff"/>
+      <stop offset="100%" style="stop-color:#6b5cff"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.25"/>
     </filter>
   </defs>
   
-  <!-- Background with glow -->
-  <rect width="100" height="100" rx="22" fill="url(#gradient)"/>
-  <rect x="5" y="5" width="90" height="90" rx="20" fill="white" opacity="0.1"/>
-  
-  <!-- Body/Shoulders 3D -->
-  <ellipse cx="50" cy="82" rx="30" ry="16" fill="#f0f0f0" filter="url(#shadow3d)"/>
-  <ellipse cx="50" cy="82" rx="30" ry="16" fill="url(#skin3d)" opacity="0.3"/>
-  
-  <!-- Neck -->
-  <rect x="43" y="60" width="14" height="14" fill="url(#skin3d)"/>
+  <!-- Background -->
+  <rect width="100" height="100" rx="20" fill="url(#bg)"/>
   
   <!-- Hair Back -->
-  <ellipse cx="50" cy="44" rx="24" ry="26" fill="url(#hair3d)" filter="url(#shadow3d)"/>
+  <ellipse cx="50" cy="45" rx="23" ry="25" fill="url(#hairGrad)" filter="url(#shadow)"/>
   
-  <!-- Face 3D -->
-  <ellipse cx="50" cy="50" rx="22" ry="24" fill="url(#skin3d)" filter="url(#shadow3d)"/>
-  <ellipse cx="45" cy="48" rx="18" ry="20" fill="#FFE0C0" opacity="0.4"/>
+  <!-- Neck -->
+  <rect x="44" y="62" width="12" height="12" fill="#D4A574"/>
   
-  <!-- Hair Front/Bangs -->
-  <path d="M26 42 Q28 22 50 22 Q72 22 74 42 Q74 36 50 36 Q26 36 26 42" fill="url(#hair3d)"/>
-  <path d="M30 38 Q32 28 38 36" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <path d="M62 38 Q60 28 54 36" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Shoulders -->
+  <ellipse cx="50" cy="80" rx="28" ry="14" fill="white" filter="url(#shadow)"/>
   
-  <!-- Eyes 3D -->
-  <ellipse cx="42" cy="50" rx="5" ry="6" fill="white" filter="url(#shadow3d)"/>
-  <ellipse cx="58" cy="50" rx="5" ry="6" fill="white" filter="url(#shadow3d)"/>
-  <circle cx="42" cy="50" r="3" fill="#1a1a1a"/>
-  <circle cx="58" cy="50" r="3" fill="#1a1a1a"/>
-  <circle cx="43" cy="49" r="1" fill="white"/>
-  <circle cx="59" cy="49" r="1" fill="white"/>
+  <!-- Face Shape -->
+  <ellipse cx="50" cy="52" rx="21" ry="23" fill="url(#skin)" filter="url(#shadow)"/>
+  
+  <!-- Face Shadow -->
+  <ellipse cx="52" cy="54" rx="16" ry="18" fill="#D4A574" opacity="0.25"/>
+  
+  <!-- Hair Front -->
+  <path d="M28 44 Q30 24 50 24 Q70 24 72 44 Q72 38 50 38 Q28 38 28 44" fill="url(#hairGrad)"/>
+  
+  <!-- Hair Strands -->
+  <path d="M32 40 Q34 32 40 38" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M60 38 Q66 32 68 40" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Left Eye White -->
+  <ellipse cx="42" cy="51" rx="5.5" ry="6.5" fill="white" filter="url(#shadow)"/>
+  <!-- Right Eye White -->
+  <ellipse cx="58" cy="51" rx="5.5" ry="6.5" fill="white" filter="url(#shadow)"/>
+  
+  <!-- Left Pupil -->
+  <circle cx="42" cy="51" r="3.2" fill="#1a1a1a"/>
+  <!-- Right Pupil -->
+  <circle cx="58" cy="51" r="3.2" fill="#1a1a1a"/>
+  
+  <!-- Eye Highlights -->
+  <circle cx="43" cy="50" r="1.2" fill="white"/>
+  <circle cx="59" cy="50" r="1.2" fill="white"/>
   
   <!-- Eyebrows -->
-  <path d="M38 44 Q42 42 46 44" fill="none" stroke="#3d3d3d" stroke-width="2" stroke-linecap="round"/>
-  <path d="M54 44 Q58 42 62 44" fill="none" stroke="#3d3d3d" stroke-width="2" stroke-linecap="round"/>
+  <path d="M37 45 Q42 43 47 45" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M53 45 Q58 43 63 45" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
   
-  <!-- Nose 3D -->
-  <ellipse cx="50" cy="56" rx="3" ry="2" fill="#E0A870" opacity="0.5"/>
-  <path d="M50 54 L50 58" fill="none" stroke="#D4A57A" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="58" rx="3.5" ry="2" fill="#C9956C" opacity="0.4"/>
+  <path d="M50 55 L49 59 Q50 60 51 59" fill="none" stroke="#B8855C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   
-  <!-- Mouth 3D Smile -->
-  <path d="M44 62 Q50 67 56 62" fill="#E5735A" opacity="0.6"/>
-  <path d="M44 62 Q50 67 56 62" fill="none" stroke="#E5735A" stroke-width="2" stroke-linecap="round"/>
+  <!-- Mouth -->
+  <path d="M44 65 Q50 70 56 65" fill="#E5735A" opacity="0.5"/>
+  <path d="M44 65 Q50 70 56 65" fill="none" stroke="#D96850" stroke-width="2" stroke-linecap="round"/>
   
-  <!-- Cheeks 3D -->
-  <ellipse cx="36" cy="58" rx="4" ry="2.5" fill="#FFB6A0" opacity="0.5"/>
-  <ellipse cx="64" cy="58" rx="4" ry="2.5" fill="#FFB6A0" opacity="0.5"/>
+  <!-- Cheeks -->
+  <ellipse cx="35" cy="60" rx="4" ry="2.5" fill="#FFB6A0" opacity="0.45"/>
+  <ellipse cx="65" cy="60" rx="4" ry="2.5" fill="#FFB6A0" opacity="0.45"/>
   
-  <!-- Highlight -->
-  <ellipse cx="35" cy="45" rx="6" ry="4" fill="white" opacity="0.25"/>
+  <!-- GLASSES -->
+  <!-- Left Lens Frame -->
+  <ellipse cx="42" cy="51" rx="7.5" ry="6.5" fill="none" stroke="url(#glassFrame)" stroke-width="2.5" opacity="0.9"/>
+  <!-- Right Lens Frame -->
+  <ellipse cx="58" cy="51" rx="7.5" ry="6.5" fill="none" stroke="url(#glassFrame)" stroke-width="2.5" opacity="0.9"/>
+  <!-- Bridge -->
+  <path d="M48 51 Q50 49 52 51" fill="none" stroke="url(#glassFrame)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Left Temple -->
+  <path d="M34 51 L28 52" stroke="url(#glassFrame)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Right Temple -->
+  <path d="M66 51 L72 52" stroke="url(#glassFrame)" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Face Highlight -->
+  <ellipse cx="46" cy="47" rx="5" ry="3" fill="white" opacity="0.2"/>
 </svg>
