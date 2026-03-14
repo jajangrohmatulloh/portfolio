@@ -33,7 +33,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-orange-500 to-yellow-500",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Docker", "Kafka", "Figma", "Git"],
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Docker", "Kubernetes", "Kafka", "Figma", "Git"],
   },
 ];
 
