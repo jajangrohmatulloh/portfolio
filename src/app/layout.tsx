@@ -25,6 +25,20 @@ export const metadata: Metadata = {
     title: "Jajang Rohmatulloh | Full-Stack Developer",
     description: "Full-Stack Developer passionate about creating beautiful and functional web applications.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Jajang Rohmatulloh - Full-Stack Developer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jajang Rohmatulloh | Full-Stack Developer",
+    description: "Full-Stack Developer passionate about creating beautiful and functional web applications.",
+    images: ["/og-image.svg"],
   },
   icons: {
     icon: "/favicon.svg",
