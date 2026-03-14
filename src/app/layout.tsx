@@ -17,12 +17,12 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Jajang Rohmatulloh | Full-Stack Developer",
+  title: "Jajang Rohmatulloh - Full-Stack Developer",
   description: "Full-Stack Developer passionate about creating beautiful and functional web applications. Specializing in React, Next.js, Node.js, and modern web technologies.",
   keywords: ["Jajang Rohmatulloh", "Full-Stack Developer", "React", "Next.js", "Node.js", "Portfolio", "Indonesia"],
   authors: [{ name: "Jajang Rohmatulloh" }],
   openGraph: {
-    title: "Jajang Rohmatulloh | Full-Stack Developer",
+    title: "Jajang Rohmatulloh - Full-Stack Developer",
     description: "Full-Stack Developer passionate about creating beautiful and functional web applications.",
     type: "website",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jajang Rohmatulloh | Full-Stack Developer",
+    title: "Jajang Rohmatulloh - Full-Stack Developer",
     description: "Full-Stack Developer passionate about creating beautiful and functional web applications.",
     images: ["/og-image.png"],
   },
