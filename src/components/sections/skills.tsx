@@ -23,7 +23,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-purple-500 to-pink-500",
-    skills: ["Java", "Go", "Node.js", "NestJS", "Express.js", "Python", "PHP", "Laravel", "Spring Boot", "REST API", "SQL", "NoSQL"],
+    skills: ["Java", "Go", "Node.js", "NestJS", "Express.js", "Python", "PHP", "Laravel", "Spring Boot", "REST API"],
   },
   {
     title: "Databases & Tools",
