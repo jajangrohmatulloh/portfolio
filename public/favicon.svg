@@ -10,13 +10,15 @@
   <!-- Background -->
   <rect width="100" height="100" rx="20" fill="url(#bg)"/>
   
-  <!-- Hexagon with Code Element -->
-  <g fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Hexagon -->
-    <path d="M50 20 L75 35 L75 65 L50 80 L25 65 L25 35 Z"/>
+  <!-- Code Brackets </> -->
+  <g fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left Bracket < -->
+    <path d="M38 35 L23 50 L38 65"/>
     
-    <!-- Code Brackets Inside -->
-    <path d="M42 38 L35 50 L42 62"/>
-    <path d="M58 38 L65 50 L58 62"/>
+    <!-- Right Bracket > -->
+    <path d="M62 35 L77 50 L62 65"/>
+    
+    <!-- Forward Slash / -->
+    <path d="M50 30 L50 70"/>
   </g>
 </svg>
