@@ -42,7 +42,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} font-sans antialiased`}
       >
-        <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
+        <ThemeProvider defaultTheme="light" storageKey="theme">
           <TooltipProvider>
             {children}
             <Toaster position="top-center" richColors closeButton />
