@@ -7,13 +7,27 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
+    name: "SALES PIPELINE",
+    tagline: "Customer Management Application",
+    description: "An internal web-based Salesforce application enabling sales teams to manage deal pipelines, improve cross-team collaboration, and increase overall productivity through streamlined workflow automation.",
+    tags: ["Salesforce", "Apex", "VisualForce", "JavaScript", "HTML", "CSS"],
+    gradient: "from-indigo-500 to-purple-500",
+    shadowColor: "shadow-indigo-500/30",
+    url: null,
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    ),
+  },
+  {
     name: "RURA",
     tagline: "Ask everything in Rura",
     description: "An intelligent Q&A platform that provides comprehensive answers to your questions. Built with modern web technologies for optimal performance and user experience.",
     tags: ["Vue", "TypeScript", "TailwindCSS", "Supabase", "Pinia", "API Integration", "AI"],
     gradient: "from-blue-500 to-cyan-500",
     shadowColor: "shadow-blue-500/30",
-    url: "https://jajangrohmatulloh.com/projects/rura",
+    url: "https://rura-omega.vercel.app/",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -31,20 +45,6 @@ const projects = [
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    ),
-  },
-  {
-    name: "SKYLINE",
-    tagline: "Check the weather at any place",
-    description: "A beautiful weather application that provides real-time weather data for any location worldwide with an intuitive interface.",
-    tags: ["Angular", "TypeScript", "API Integration"],
-    gradient: "from-orange-500 to-yellow-500",
-    shadowColor: "shadow-orange-500/30",
-    url: "https://skyline-henna.vercel.app/",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
       </svg>
     ),
   },
@@ -86,7 +86,7 @@ export function ProjectsSection() {
           </motion.div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Featured Projects
+              Projects
             </span>
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
@@ -137,13 +137,20 @@ export function ProjectsSection() {
                 
                 <CardFooter>
                   <Button
-                    className={`w-full cursor-pointer bg-gradient-to-r ${project.gradient} hover:opacity-90 transition-all duration-300 group/btn rounded-xl py-6 text-base font-medium shadow-lg ${project.shadowColor} hover:shadow-xl text-white`}
-                    onClick={() => handleViewProject(project.url)}
+                    className={`w-full ${project.url ? 'cursor-pointer' : 'cursor-default'} bg-gradient-to-r ${project.gradient} ${project.url ? 'hover:opacity-90' : 'opacity-75'} transition-all duration-300 group/btn rounded-xl py-6 text-base font-medium shadow-lg ${project.shadowColor} ${project.url ? 'hover:shadow-xl' : ''} text-white`}
+                    onClick={() => project.url && handleViewProject(project.url)}
+                    disabled={!project.url}
                   >
-                    View Project
-                    <svg className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
+                    {project.url ? 'View Project' : 'Internal Project'}
+                    {project.url ? (
+                      <svg className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    ) : (
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      </svg>
+                    )}
                   </Button>
                 </CardFooter>
               </Card>

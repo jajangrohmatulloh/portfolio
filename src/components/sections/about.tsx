@@ -7,10 +7,16 @@ import Image from "next/image";
 
 const experiences = [
   {
-    company: "PT Global Infotech Solution",
+    company: "Infinity Connection Group",
+    role: "Full-Stack Developer",
+    period: "May 2024 – Jul 2024 • Remote (Project-based)",
+    description: "Designed and built full-stack web applications with focus on security and performance. Implemented secure authentication, input validation, and optimized code structure to protect data and prevent vulnerabilities.",
+  },
+  {
+    company: "Global Infotech Solution",
     role: "System Engineer L1",
-    period: "Feb 2023 – May 2024",
-    description: "Developed applications with Salesforce, MuleSoft, and Advance.AI",
+    period: "Feb 2023 – May 2024 • On-site",
+    description: "Built mobile and web applications using React Native and React.js. Customized Salesforce applications and integrated Google Drive, reducing manual processes by 15%. Earned 3 certifications (Salesforce Administrator, Developer, and MuleSoft Developer) and authored technical documentation for client-facing projects.",
   },
 ];
 
