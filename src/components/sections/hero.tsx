@@ -14,12 +14,12 @@ export function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
-      
+
       {/* Aceternity Sparkles */}
-      <Sparkles 
+      <Sparkles
         particleCount={15}
         minSize={3}
         maxSize={8}
@@ -27,14 +27,14 @@ export function HeroSection() {
         maxSpeed={1.5}
         colors={["#3B82F6", "#8B5CF6", "#EC4899", "#06B6D4", "#F59E0B"]}
       />
-      
+
       {/* Animated Orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/4 -right-1/4 w-[800px] h-[800px] bg-gradient-to-br from-blue-400/15 via-purple-400/15 to-pink-400/15 dark:from-blue-500/20 dark:via-purple-500/20 dark:to-pink-500/20 rounded-full blur-3xl" />
         <div className="absolute -bottom-1/4 -left-1/4 w-[800px] h-[800px] bg-gradient-to-tr from-purple-400/15 via-pink-400/15 to-blue-400/15 dark:from-purple-500/20 dark:via-pink-500/20 dark:to-blue-500/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center">
           {/* Greeting Badge */}
           <Badge
@@ -64,8 +64,8 @@ export function HeroSection() {
 
           {/* Description */}
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            A person with high interest in technology, especially programming. 
-            Has been studying programming since 2019 and continues to explore to improve skills.
+            Full-stack developer turning ideas into working software — end to end, backend to browser.
+            Experienced in building APIs and services with Spring Boot, Go, Node.js, NestJS, and Express.js, and responsive and interactive interfaces with React.js, Next.js, TypeScript, JavaScript, TailwindCSS, and SASS.
           </p>
 
           {/* CTA Buttons */}
@@ -94,7 +94,7 @@ export function HeroSection() {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="mt-20">
+          <div className="mt-8">
             <div
               className="inline-flex flex-col items-center text-slate-500 dark:text-slate-400 cursor-pointer group"
               onClick={() => scrollToSection("about")}

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -12,6 +11,7 @@ const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
+  { href: "#certifications", label: "Certifications" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
@@ -19,7 +19,6 @@ const navLinks = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [showHireMe, setShowHireMe] = useState(false);
   const [showName, setShowName] = useState(false);
 
   useEffect(() => {
@@ -31,16 +30,13 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    const ctaTarget = document.getElementById("hero-get-in-touch");
     const nameTarget = document.getElementById("hero-name");
-    if (!ctaTarget && !nameTarget) return;
+    if (!nameTarget) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.target.id === "hero-get-in-touch") {
-            setShowHireMe(!entry.isIntersecting);
-          } else if (entry.target.id === "hero-name") {
+          if (entry.target.id === "hero-name") {
             setShowName(!entry.isIntersecting);
           }
         }
@@ -48,7 +44,6 @@ export function Header() {
       { rootMargin: "-64px 0px 0px 0px", threshold: 0 }
     );
 
-    if (ctaTarget) observer.observe(ctaTarget);
     if (nameTarget) observer.observe(nameTarget);
     return () => observer.disconnect();
   }, []);
@@ -99,15 +94,6 @@ export function Header() {
             <ThemeToggle />
           </nav>
 
-          {/* CTA Button */}
-          <div className={`hidden md:block transition-opacity duration-300 ${showHireMe ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
-            <Button
-              className="cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-lg"
-              onClick={() => scrollToSection("#contact")}
-            >
-              Hire Me
-            </Button>
-          </div>
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -130,15 +116,6 @@ export function Header() {
                 ))}
               </nav>
 
-              {/* CTA Button */}
-              <div className="px-6 pb-6 pt-2 border-t border-slate-200 dark:border-slate-800">
-                <Button
-                  className="w-full cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 rounded-xl py-6 text-base font-medium"
-                  onClick={() => scrollToSection("#contact")}
-                >
-                  Hire Me
-                </Button>
-              </div>
 
               {/* Theme Toggle */}
               <div className="flex items-center justify-center pb-6">
