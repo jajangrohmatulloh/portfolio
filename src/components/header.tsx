@@ -19,6 +19,8 @@ const navLinks = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [showHireMe, setShowHireMe] = useState(false);
+  const [showName, setShowName] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,29 @@ export function Header() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const ctaTarget = document.getElementById("hero-get-in-touch");
+    const nameTarget = document.getElementById("hero-name");
+    if (!ctaTarget && !nameTarget) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.target.id === "hero-get-in-touch") {
+            setShowHireMe(!entry.isIntersecting);
+          } else if (entry.target.id === "hero-name") {
+            setShowName(!entry.isIntersecting);
+          }
+        }
+      },
+      { rootMargin: "-64px 0px 0px 0px", threshold: 0 }
+    );
+
+    if (ctaTarget) observer.observe(ctaTarget);
+    if (nameTarget) observer.observe(nameTarget);
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (href: string) => {
@@ -55,7 +80,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <button onClick={scrollToTop} className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer">
+          <button onClick={scrollToTop} className={`text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-opacity duration-300 ${showName ? "opacity-100 cursor-pointer" : "opacity-0 pointer-events-none"}`}>
             Jajang Rohmatulloh
           </button>
 
@@ -75,7 +100,7 @@ export function Header() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className={`hidden md:block transition-opacity duration-300 ${showHireMe ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
             <Button
               className="cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-lg"
               onClick={() => scrollToSection("#contact")}

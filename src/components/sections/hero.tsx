@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { FolderOpen, CircleArrowDown } from "lucide-react";
 import { Sparkles } from "@/components/aceternity/sparkles";
 
 export function HeroSection() {
@@ -46,7 +47,7 @@ export function HeroSection() {
           </Badge>
 
           {/* Name with Gradient Text */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+          <h1 id="hero-name" className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
               Jajang Rohmatulloh
             </span>
@@ -75,12 +76,11 @@ export function HeroSection() {
               onClick={() => scrollToSection("projects")}
             >
               View My Work
-              <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              <FolderOpen className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
             </Button>
 
             <Button
+              id="hero-get-in-touch"
               size="lg"
               variant="outline"
               className="group cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 px-8 py-6 text-lg rounded-2xl border-2 backdrop-blur-sm bg-white/80 dark:bg-slate-800/50 hover:bg-white/90 dark:hover:bg-slate-800/80 text-slate-700 dark:text-slate-300"
@@ -100,9 +100,10 @@ export function HeroSection() {
               onClick={() => scrollToSection("about")}
             >
               <span className="text-sm mb-3 font-medium group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors">Scroll to explore</span>
-              <div className="w-8 h-12 rounded-full border-2 border-slate-300 dark:border-slate-600 flex items-start justify-center p-2 group-hover:border-blue-500 transition-colors">
+              <div className="hidden md:flex w-8 h-12 rounded-full border-2 border-slate-300 dark:border-slate-600 items-start justify-center pt-2 group-hover:border-blue-500 transition-colors">
                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" />
               </div>
+              <CircleArrowDown className="md:hidden w-6 h-6 animate-bounce text-blue-500" />
             </div>
           </div>
         </div>
