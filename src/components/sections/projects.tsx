@@ -8,8 +8,8 @@ import { Badge } from "@/components/ui/badge";
 const projects = [
   {
     name: "SALES PIPELINE",
-    tagline: "Customer Management Application",
-    description: "An internal web-based Salesforce application enabling sales teams to manage deal pipelines, improve cross-team collaboration, and increase overall productivity through streamlined workflow automation.",
+    tagline: "Track your deals and boost team productivity",
+    description: "A customer management application — an internal web-based Salesforce tool enabling sales teams to manage deal pipelines, improve cross-team collaboration, and increase overall productivity through streamlined workflow automation.",
     tags: ["Salesforce", "Apex", "VisualForce", "JavaScript", "HTML", "CSS"],
     gradient: "from-indigo-500 to-purple-500",
     shadowColor: "shadow-indigo-500/30",
@@ -31,6 +31,20 @@ const projects = [
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+  },
+  {
+    name: "TIKTOK LIVE GIFTVOICE",
+    tagline: "Engage viewers with live gift-triggered audio",
+    description: "A tool that connects to TikTok Live streams and triggers audio responses when viewers send gifts — like automated thank-you messages played through the device speaker that live viewers can hear. Designed to encourage viewer engagement and increase gift frequency.",
+    tags: ["Node.js", "Express.js", "Socket.IO", "TikTok Live API", "Text-to-Speech"],
+    gradient: "from-pink-500 to-rose-500",
+    shadowColor: "shadow-pink-500/30",
+    url: "https://github.com/jajangrohmatulloh/tiktok-live-connector",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
       </svg>
     ),
   },
