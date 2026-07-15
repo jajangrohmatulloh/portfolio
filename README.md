@@ -16,6 +16,16 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Contact form email
+
+The contact form sends mail through Brevo SMTP. Copy `.env.example` to `.env.local` and set:
+
+- `BREVO_SMTP_HOST`, `BREVO_SMTP_PORT`, `BREVO_SMTP_USER`, and `BREVO_SMTP_PASSWORD` — your Brevo SMTP Relay settings.
+- `CONTACT_EMAIL_TO` — the inbox that should receive messages.
+- `CONTACT_EMAIL_FROM` — a sender verified in Brevo.
+
+The visitor's address is set as the message reply-to address.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
