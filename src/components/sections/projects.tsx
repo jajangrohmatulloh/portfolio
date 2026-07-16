@@ -73,7 +73,7 @@ export function ProjectsSection() {
     <section id="projects" className="py-24 bg-white dark:bg-slate-950 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]" />
-      
+
       {/* Decorative elements */}
       <div className="absolute top-0 left-1/2 w-96 h-96 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
 
@@ -85,7 +85,7 @@ export function ProjectsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <motion.div 
+          <motion.div
             initial={{ scale: 0, rotate: -180 }}
             whileInView={{ scale: 1, rotate: 0 }}
             viewport={{ once: true }}
@@ -120,7 +120,7 @@ export function ProjectsSection() {
             >
               <Card className="h-full transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 overflow-hidden group border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 relative">
                 <CardHeader>
-                  <motion.div 
+                  <motion.div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-white mb-4 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}
                     whileHover={{ scale: 1.1, rotate: 6 }}
                   >
@@ -131,7 +131,7 @@ export function ProjectsSection() {
                     {project.tagline}
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardContent className="flex-grow">
                   <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
                     {project.description}
@@ -148,24 +148,31 @@ export function ProjectsSection() {
                     ))}
                   </div>
                 </CardContent>
-                
+
                 <CardFooter>
-                  <Button
-                    className={`w-full ${project.url ? 'cursor-pointer' : 'cursor-default'} bg-gradient-to-r ${project.gradient} ${project.url ? 'hover:opacity-90' : 'opacity-75'} transition-all duration-300 group/btn rounded-xl py-6 text-base font-medium shadow-lg ${project.shadowColor} ${project.url ? 'hover:shadow-xl' : ''} text-white`}
-                    onClick={() => project.url && handleViewProject(project.url)}
-                    disabled={!project.url}
-                  >
-                    {project.url ? 'View Project' : 'Internal Project'}
-                    {project.url ? (
+                  {project.url ? (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center justify-center w-full !h-auto rounded-xl py-4 text-base font-medium shadow-lg ${project.shadowColor} bg-gradient-to-r ${project.gradient} hover:opacity-90 transition-all duration-300 group/btn hover:shadow-xl text-white`}
+                    >
+                      View Project
                       <svg className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
-                    ) : (
+                    </a>
+                  ) : (
+                    <Button
+                      className={`!h-auto w-full cursor-default rounded-xl py-4 text-base font-medium shadow-lg ${project.shadowColor} bg-gradient-to-r ${project.gradient} opacity-75 transition-all duration-300 group/btn text-white`}
+                      disabled
+                    >
+                      Internal Project
                       <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                       </svg>
-                    )}
-                  </Button>
+                    </Button>
+                  )}
                 </CardFooter>
               </Card>
             </motion.div>

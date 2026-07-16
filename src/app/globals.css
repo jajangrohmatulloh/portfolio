@@ -46,7 +46,7 @@
   --muted-foreground: 215 20% 65%;
   --accent: 217 33% 18%;
   --accent-foreground: 210 40% 98%;
-  --destructive: 0 63% 31%;
+  --destructive: 353 84% 63%;
   --destructive-foreground: 210 40% 98%;
   --border: 217 33% 18%;
   --input: 217 33% 18%;
@@ -179,7 +179,8 @@ html {
 
 /* Toast styles */
 .cn-toast {
-  background: hsl(var(--normal-bg));
+  background: none !important;
+  background-image: linear-gradient(to right, #2563eb 0%, #7c3aed 100%) !important;
   color: hsl(var(--normal-text));
   border: 1px solid hsl(var(--normal-border) / 0.4);
   backdrop-filter: blur(18px);
@@ -190,19 +191,39 @@ html {
   min-width: 20rem;
 }
 
+.cn-toast[data-theme="light"],
+.light .cn-toast,
+html.light .cn-toast {
+  background: none !important;
+  background-image: linear-gradient(to right, #2563eb 0%, #7c3aed 100%) !important;
+}
+
 .cn-toast[data-theme="dark"],
 .dark .cn-toast,
 html.dark .cn-toast {
-  background: hsl(var(--popover) / 0.92);
+  background: none !important;
+  background-image: linear-gradient(to right, #2563eb 0%, #7c3aed 100%) !important;
   color: #ffffff !important;
-  border-color: hsl(var(--border) / 0.45);
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.3);
+  border-color: transparent;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.5);
 }
 
 .cn-toast[data-theme="dark"] .cn-toast-description,
 .dark .cn-toast .cn-toast-description,
 html.dark .cn-toast .cn-toast-description {
   opacity: 0.9;
+}
+
+.cn-toast[data-type="info"] {
+  background-image: linear-gradient(to bottom right, rgba(56, 189, 248, 0.96), rgba(14, 165, 233, 0.92)) !important;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.cn-toast[data-type="warning"] {
+  background-image: linear-gradient(to bottom right, rgba(245, 158, 11, 0.95), rgba(249, 115, 22, 0.92)) !important;
+  color: #ffffff;
+  border-color: transparent;
 }
 
 .cn-toast-title {
@@ -218,26 +239,33 @@ html.dark .cn-toast .cn-toast-description {
 }
 
 .cn-toast[data-type="success"] {
-  background-image: linear-gradient(135deg, rgba(59, 130, 246, 0.95), rgba(139, 92, 246, 0.95), rgba(236, 72, 153, 0.95));
+  background-image: linear-gradient(to bottom right, rgba(59, 130, 246, 0.95), rgba(139, 92, 246, 0.95), rgba(236, 72, 153, 0.95)) !important;
   color: #ffffff;
   border-color: transparent;
 }
 
 .cn-toast[data-type="error"] {
-  background-image: linear-gradient(135deg, rgba(239, 68, 68, 0.98), rgba(249, 115, 22, 0.92));
+  background-image: linear-gradient(to bottom right, rgba(239, 68, 68, 0.98), rgba(249, 115, 22, 0.92)) !important;
   color: #ffffff;
   border-color: transparent;
 }
 
 .cn-toast[data-type="info"] {
-  background-image: linear-gradient(135deg, rgba(14, 165, 233, 0.95), rgba(99, 102, 241, 0.95));
+  background-image: linear-gradient(to bottom right, rgba(14, 165, 233, 0.95), rgba(99, 102, 241, 0.95)) !important;
   color: #ffffff;
   border-color: transparent;
 }
 
-.cn-toast[data-type="warning"] {
-  background-image: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(251, 191, 36, 0.95));
-  color: #111827;
+.cn-toast.cn-toast-email {
+  background-image: linear-gradient(to bottom right, rgba(56, 189, 248, 0.95), rgba(139, 92, 246, 0.95), rgba(236, 72, 153, 0.95)) !important;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.dark .cn-toast.cn-toast-email,
+html.dark .cn-toast.cn-toast-email {
+  background-image: linear-gradient(to bottom right, rgba(56, 189, 248, 0.92), rgba(99, 102, 241, 0.92), rgba(168, 85, 247, 0.92)) !important;
+  color: #ffffff;
   border-color: transparent;
 }
 

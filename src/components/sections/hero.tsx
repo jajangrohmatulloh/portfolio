@@ -14,13 +14,13 @@ export function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <section id="home" className="relative min-h-[100svh] sm:min-h-screen flex items-center justify-center overflow-hidden pb-10 sm:pb-16 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
 
       {/* Aceternity Sparkles */}
       <Sparkles
-        particleCount={15}
+        particleCount={10}
         minSize={3}
         maxSize={8}
         minSpeed={0.3}
@@ -34,7 +34,7 @@ export function HeroSection() {
         <div className="absolute -bottom-1/4 -left-1/4 w-[800px] h-[800px] bg-gradient-to-tr from-purple-400/15 via-pink-400/15 to-blue-400/15 dark:from-purple-500/20 dark:via-pink-500/20 dark:to-blue-500/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-12 sm:pt-16">
         <div className="text-center">
           {/* Greeting Badge */}
           <Badge
