@@ -3,7 +3,7 @@
 import * as React from "react";
 import { createContext, useContext, useEffect, useState } from "react";
 
-type Theme = "dark" | "light" | "system";
+type Theme = "dark" | "light";
 
 type ThemeProviderProps = {
   children: React.ReactNode;
@@ -36,34 +36,17 @@ export function ThemeProvider({
 
   useEffect(() => {
     const stored = localStorage.getItem(storageKey) as Theme;
-    if (stored) {
+    if (stored === "light" || stored === "dark") {
       setTheme(stored);
     }
   }, [storageKey]);
 
   useEffect(() => {
     const root = window.document.documentElement;
-    const media = window.matchMedia("(prefers-color-scheme: dark)");
 
-    const applyTheme = () => {
-      let nextTheme = theme;
-
-      root.classList.remove("light", "dark");
-
-      if (theme === "system") {
-        nextTheme = media.matches ? "dark" : "light";
-      }
-
-      root.classList.add(nextTheme);
-      setResolvedTheme(nextTheme);
-    };
-
-    applyTheme();
-
-    if (theme === "system") {
-      media.addEventListener?.("change", applyTheme);
-      return () => media.removeEventListener?.("change", applyTheme);
-    }
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+    setResolvedTheme(theme);
   }, [theme]);
 
   const value = {

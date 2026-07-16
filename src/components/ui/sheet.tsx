@@ -41,17 +41,47 @@ function SheetContent({
   children,
   side = "right",
   showCloseButton = true,
+  onClose,
   ...props
 }: SheetPrimitive.Popup.Props & {
   side?: "top" | "right" | "bottom" | "left"
   showCloseButton?: boolean
+  onClose?: () => void
 }) {
+  const touchStartY = React.useRef<number | null>(null)
+  const touchStartX = React.useRef<number | null>(null)
+
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    const touch = event.touches[0]
+    touchStartY.current = touch?.clientY ?? null
+    touchStartX.current = touch?.clientX ?? null
+  }
+
+  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartY.current === null || touchStartX.current === null) return
+
+    const touchEndY = event.changedTouches[0]?.clientY ?? 0
+    const touchEndX = event.changedTouches[0]?.clientX ?? 0
+    const deltaY = touchEndY - touchStartY.current
+    const deltaX = Math.abs(touchEndX - touchStartX.current)
+
+    if (side === "bottom" && deltaY > 90 && deltaY > deltaX) {
+      onClose?.()
+    }
+
+    touchStartY.current = null
+    touchStartX.current = null
+  }
+
   return (
     <SheetPortal>
       <SheetOverlay />
       <SheetPrimitive.Popup
         data-slot="sheet-content"
         data-side={side}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        style={{ touchAction: "pan-y" }}
         className={cn(
           "fixed z-50 flex flex-col gap-4 bg-background bg-clip-padding shadow-lg transition duration-200 ease-in-out data-ending-style:opacity-0 data-starting-style:opacity-0 data-[side=bottom]:inset-x-0 data-[side=bottom]:bottom-0 data-[side=bottom]:h-auto data-[side=bottom]:border-t data-[side=bottom]:data-ending-style:translate-y-[2.5rem] data-[side=bottom]:data-starting-style:translate-y-[2.5rem] data-[side=left]:inset-y-0 data-[side=left]:left-0 data-[side=left]:h-full data-[side=left]:w-3/4 data-[side=left]:data-ending-style:translate-x-[-2.5rem] data-[side=left]:data-starting-style:translate-x-[-2.5rem] data-[side=right]:inset-y-0 data-[side=right]:right-0 data-[side=right]:h-full data-[side=right]:w-3/4 data-[side=right]:data-ending-style:translate-x-[2.5rem] data-[side=right]:data-starting-style:translate-x-[2.5rem] data-[side=top]:inset-x-0 data-[side=top]:top-0 data-[side=top]:h-auto data-[side=top]:border-b data-[side=top]:data-ending-style:translate-y-[-2.5rem] data-[side=top]:data-starting-style:translate-y-[-2.5rem] data-[side=left]:sm:max-w-sm data-[side=right]:sm:max-w-sm",
           className

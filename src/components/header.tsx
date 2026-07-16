@@ -134,24 +134,31 @@ export function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-sm bg-white dark:bg-slate-950 p-0">
-              {/* Navigation Links */}
-              <nav className="flex flex-col gap-1 p-6">
+            <SheetContent onClose={() => setIsOpen(false)} side="bottom" className="w-full rounded-t-[1.5rem] border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950 p-0 shadow-2xl">
+              <div className="flex flex-col items-center gap-2 px-6 pt-4">
+                <div className="h-1.5 w-16 rounded-full bg-slate-200 dark:bg-slate-700" />
+                <div className="w-full text-center">
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white">Navigation</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Swipe down or tap outside to close</p>
+                </div>
+              </div>
+
+              <nav className="grid gap-3 px-5 py-4">
                 {navLinks.map((link) => (
                   <button
                     key={link.href}
                     onClick={() => scrollToSection(link.href)}
-                    className={`flex items-center px-4 py-3 text-left rounded-lg transition-colors cursor-pointer ${activeSection === link.href ? "bg-gradient-to-r from-sky-600 via-purple-600 to-fuchsia-600 text-white shadow-lg shadow-fuchsia-500/20" : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400"}`}
+                    className={`w-full rounded-3xl border px-5 py-4 text-left text-base font-medium transition ${activeSection === link.href ? "bg-gradient-to-r from-sky-600 via-purple-600 to-fuchsia-600 text-white shadow-lg shadow-fuchsia-500/20" : "border-slate-200 bg-slate-100 text-slate-900 hover:border-slate-300 hover:bg-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-700 dark:hover:bg-slate-800"}`}
                   >
                     {link.label}
                   </button>
                 ))}
               </nav>
 
-
-              {/* Theme Toggle */}
-              <div className="flex items-center justify-center pb-6">
-                <ThemeToggle />
+              <div className="border-t border-slate-200 px-5 py-4 dark:border-slate-800">
+                <div className="flex justify-center">
+                  <ThemeToggle showLabel className="max-w-[8rem]" />
+                </div>
               </div>
             </SheetContent>
           </Sheet>
