@@ -20,7 +20,7 @@ export function HeroSection() {
 
       {/* Aceternity Sparkles */}
       <Sparkles
-        particleCount={15}
+        particleCount={10}
         minSize={3}
         maxSize={8}
         minSpeed={0.3}
