@@ -64,6 +64,12 @@ function EmailContactCard() {
   return (
     <a
       href={`mailto:${contactEmail}`}
+      onClick={() =>
+        toast.success("Email action ready!", {
+          description: "Opening your mail client so you can send a message.",
+          className: "cn-toast-email",
+        })
+      }
       className="block rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-px shadow-lg shadow-blue-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 hover:scale-[1.02] cursor-pointer"
       aria-label={`Send email to ${contactEmail}`}
     >

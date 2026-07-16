@@ -20,6 +20,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showName, setShowName] = useState(false);
+  const [activeSection, setActiveSection] = useState("#home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,10 +50,41 @@ export function Header() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const sectionElements = navLinks
+      .map((link) => document.querySelector(link.href))
+      .filter(Boolean) as HTMLElement[];
+
+    if (sectionElements.length === 0) return;
+
+    const updateActiveSection = () => {
+      const headerHeight = document.querySelector("header")?.clientHeight ?? 64;
+      const currentScroll = window.scrollY + headerHeight + 8;
+      const currentSection = sectionElements
+        .map((section) => ({ id: `#${section.id}`, offset: section.offsetTop }))
+        .filter((section) => section.offset <= currentScroll)
+        .sort((a, b) => b.offset - a.offset)[0];
+
+      if (currentSection) {
+        setActiveSection(currentSection.id);
+      }
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection);
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(href);
       setIsOpen(false);
     }
   };
@@ -68,8 +100,8 @@ export function Header() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg shadow-lg"
-          : "bg-transparent"
+        ? "bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg shadow-lg"
+        : "bg-transparent"
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,12 +112,12 @@ export function Header() {
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
+          <nav className={`hidden md:flex items-center gap-1 absolute transition-all duration-300 ${showName ? "right-4 left-auto translate-x-0" : "left-1/2 -translate-x-1/2"}`}>
             {navLinks.map((link) => (
               <Button
                 key={link.href}
                 variant="ghost"
-                className="cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800"
+                className={`cursor-pointer transition-all ${activeSection === link.href ? "bg-gradient-to-r from-sky-600 via-purple-600 to-fuchsia-600 text-white shadow-lg shadow-fuchsia-500/20" : "hover:bg-slate-100 dark:hover:bg-slate-800"}`}
                 onClick={() => scrollToSection(link.href)}
               >
                 {link.label}
@@ -109,7 +141,7 @@ export function Header() {
                   <button
                     key={link.href}
                     onClick={() => scrollToSection(link.href)}
-                    className="flex items-center px-4 py-3 text-left rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
+                    className={`flex items-center px-4 py-3 text-left rounded-lg transition-colors cursor-pointer ${activeSection === link.href ? "bg-gradient-to-r from-sky-600 via-purple-600 to-fuchsia-600 text-white shadow-lg shadow-fuchsia-500/20" : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400"}`}
                   >
                     {link.label}
                   </button>
