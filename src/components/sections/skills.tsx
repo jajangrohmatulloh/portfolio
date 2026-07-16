@@ -33,7 +33,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-orange-500 to-yellow-500",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Supabase", "Firebase", "Vite", "Webpack", "Kafka", "Docker", "Git", "GitHub", "GitHub Copilot", "Jira", "Cursor", "Claude Code", "Antigravity"],
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Supabase", "Firebase", "Vite", "Webpack", "Kafka", "Docker", "Git", "GitHub", "Jira", "Claude Code", "GitHub Copilot", "Cursor"],
   },
 ];
 
@@ -42,7 +42,7 @@ export function SkillsSection() {
     <section id="skills" className="py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]" />
-      
+
       {/* Decorative blobs */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
@@ -55,7 +55,7 @@ export function SkillsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <motion.div 
+          <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -93,11 +93,11 @@ export function SkillsSection() {
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${category.gradient} flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                     {category.icon}
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {category.title}
                   </h3>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
                       <motion.div
