@@ -155,7 +155,7 @@ export function ProjectsSection() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center justify-center w-full !h-auto rounded-xl py-6 text-base font-medium shadow-lg ${project.shadowColor} bg-gradient-to-r ${project.gradient} hover:opacity-90 transition-all duration-300 group/btn hover:shadow-xl text-white`}
+                      className={`inline-flex items-center justify-center w-full !h-auto rounded-xl py-4 text-base font-medium shadow-lg ${project.shadowColor} bg-gradient-to-r ${project.gradient} hover:opacity-90 transition-all duration-300 group/btn hover:shadow-xl text-white`}
                     >
                       View Project
                       <svg className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,7 +164,7 @@ export function ProjectsSection() {
                     </a>
                   ) : (
                     <Button
-                      className={`!h-auto w-full cursor-default rounded-xl py-6 text-base font-medium shadow-lg ${project.shadowColor} bg-gradient-to-r ${project.gradient} opacity-75 transition-all duration-300 group/btn text-white`}
+                      className={`!h-auto w-full cursor-default rounded-xl py-4 text-base font-medium shadow-lg ${project.shadowColor} bg-gradient-to-r ${project.gradient} opacity-75 transition-all duration-300 group/btn text-white`}
                       disabled
                     >
                       Internal Project

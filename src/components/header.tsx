@@ -107,17 +107,24 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <button onClick={scrollToTop} className={`text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-opacity duration-300 ${showName ? "opacity-100 cursor-pointer" : "opacity-0 pointer-events-none"}`}>
+          <button
+            type="button"
+            onClick={scrollToTop}
+            aria-label="Scroll to top"
+            className={`text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-opacity duration-300 ${showName ? "opacity-100 cursor-pointer" : "opacity-0 pointer-events-none"}`}>
             Jajang Rohmatulloh
           </button>
 
           {/* Desktop Navigation */}
-          <nav className={`hidden md:flex items-center gap-1 absolute transition-all duration-300 ${showName ? "right-4 left-auto translate-x-0" : "left-1/2 -translate-x-1/2"}`}>
+          <nav
+            aria-label="Primary navigation"
+            className={`hidden md:flex items-center gap-1 absolute transition-all duration-300 ${showName ? "right-4 left-auto translate-x-0" : "left-1/2 -translate-x-1/2"}`}>
             {navLinks.map((link) => (
               <Button
                 key={link.href}
                 variant="ghost"
-                className={`cursor-pointer transition-all ${activeSection === link.href ? "bg-gradient-to-r from-sky-600 via-purple-600 to-fuchsia-600 text-white shadow-lg shadow-fuchsia-500/20" : "hover:bg-slate-100 dark:hover:bg-slate-800"}`}
+                aria-current={activeSection === link.href ? "page" : undefined}
+                className={`cursor-pointer transition-all ${activeSection === link.href ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/20 hover:from-blue-700 hover:to-purple-700" : "hover:bg-slate-100 dark:hover:bg-slate-800"}`}
                 onClick={() => scrollToSection(link.href)}
               >
                 {link.label}
@@ -129,26 +136,39 @@ export function Header() {
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger className="md:hidden">
-              <svg className="h-6 w-6 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <SheetTrigger
+              className="md:hidden"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
+            >
+              <svg className="h-6 w-6 cursor-pointer" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </SheetTrigger>
-            <SheetContent onClose={() => setIsOpen(false)} side="bottom" className="w-full rounded-t-[1.5rem] border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950 p-0 shadow-2xl">
+            <SheetContent
+              id="mobile-navigation"
+              aria-labelledby="mobile-navigation-title"
+              onClose={() => setIsOpen(false)}
+              side="bottom"
+              className="w-full rounded-t-[1.5rem] border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950 p-0 shadow-2xl"
+            >
               <div className="flex flex-col items-center gap-2 px-6 pt-4">
                 <div className="h-1.5 w-16 rounded-full bg-slate-200 dark:bg-slate-700" />
                 <div className="w-full text-center">
-                  <p className="text-sm font-semibold text-slate-900 dark:text-white">Navigation</p>
+                  <p id="mobile-navigation-title" className="text-sm font-semibold text-slate-900 dark:text-white">Navigation</p>
                   <p className="text-xs text-slate-500 dark:text-slate-400">Swipe down or tap outside to close</p>
                 </div>
               </div>
 
-              <nav className="grid gap-3 px-5 py-4">
+              <nav aria-label="Mobile navigation" className="grid gap-3 px-5 py-4">
                 {navLinks.map((link) => (
                   <button
                     key={link.href}
+                    type="button"
                     onClick={() => scrollToSection(link.href)}
-                    className={`w-full rounded-3xl border px-5 py-4 text-left text-base font-medium transition ${activeSection === link.href ? "bg-gradient-to-r from-sky-600 via-purple-600 to-fuchsia-600 text-white shadow-lg shadow-fuchsia-500/20" : "border-slate-200 bg-slate-100 text-slate-900 hover:border-slate-300 hover:bg-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-700 dark:hover:bg-slate-800"}`}
+                    aria-current={activeSection === link.href ? "page" : undefined}
+                    className={`w-full rounded-3xl border px-5 py-4 text-left text-base font-medium transition ${activeSection === link.href ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/20 hover:from-blue-700 hover:to-purple-700" : "border-slate-200 bg-slate-100 text-slate-900 hover:border-slate-300 hover:bg-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-700 dark:hover:bg-slate-800"}`}
                   >
                     {link.label}
                   </button>

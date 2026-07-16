@@ -25,6 +25,7 @@ export function ThemeToggle({ className, label, showLabel }: ThemeToggleProps) {
       size={hasLabel ? "default" : "icon-sm"}
       onClick={() => setTheme(nextTheme)}
       aria-label={`Switch to ${nextTheme} mode`}
+      aria-pressed={theme === "dark"}
       className={cn(
         "inline-flex items-center justify-center gap-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background cursor-pointer",
         hasLabel
@@ -34,9 +35,9 @@ export function ThemeToggle({ className, label, showLabel }: ThemeToggleProps) {
       )}
     >
       {theme === "dark" ? (
-        <Moon className="h-5 w-5" />
+        <Moon className="h-5 w-5" aria-hidden="true" />
       ) : (
-        <Sun className="h-5 w-5" />
+        <Sun className="h-5 w-5" aria-hidden="true" />
       )}
       {labelText ? <span className="text-sm font-medium">{labelText}</span> : null}
     </Button>
