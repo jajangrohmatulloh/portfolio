@@ -10,7 +10,7 @@ const projects = [
     name: "SALES PIPELINE",
     tagline: "Track your deals and boost team productivity",
     description: "A customer management application — an internal web-based Salesforce tool enabling sales teams to manage deal pipelines, improve cross-team collaboration, and increase overall productivity through streamlined workflow automation.",
-    tags: ["Salesforce", "Apex", "VisualForce", "JavaScript", "HTML", "CSS"],
+    tags: ["Salesforce", "Apex", "VisualForce", "JavaScript", "HTML", "CSS", "API Integration"],
     gradient: "from-indigo-500 to-purple-500",
     shadowColor: "shadow-indigo-500/30",
     url: null,
@@ -38,7 +38,7 @@ const projects = [
     name: "TIKTOK LIVE GIFTVOICE",
     tagline: "Engage viewers with live gift-triggered audio",
     description: "A tool that connects to TikTok Live streams and triggers audio responses when viewers send gifts — like automated thank-you messages played through the device speaker that live viewers can hear. Designed to encourage viewer engagement and increase gift frequency.",
-    tags: ["Node.js", "Express.js", "Socket.IO", "TikTok Live API", "Text-to-Speech"],
+    tags: ["Node.js", "Express.js", "Socket.IO", "TikTok Live API", "Text-to-Speech", "API Integration"],
     gradient: "from-pink-500 to-rose-500",
     shadowColor: "shadow-pink-500/30",
     url: "https://github.com/jajangrohmatulloh/tiktok-live-connector",
@@ -49,10 +49,24 @@ const projects = [
     ),
   },
   {
+    name: "ADVANCE.AI API TESTER",
+    tagline: "Web and Android request tester with response viewer",
+    description: "An internal tool with a React.js web client and a separate React Native Android app for composing Advance.ai API requests and viewing responses.",
+    tags: ["React.js", "React Native", "TypeScript", "JavaScript", "Node.js", "Bootstrap", "API Integration"],
+    gradient: "from-emerald-500 to-teal-500",
+    shadowColor: "shadow-emerald-500/30",
+    url: null,
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9h8M8 13h5m-6 5h8a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+  {
     name: "ZENITH",
     tagline: "Manage your tasks and focus on what matters",
     description: "A powerful task management system designed to help you organize your work, track progress, and achieve your goals efficiently.",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "Supabase"],
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Supabase", "API Integration"],
     gradient: "from-purple-500 to-pink-500",
     shadowColor: "shadow-purple-500/30",
     url: "https://zenith-two-pearl.vercel.app/",
@@ -75,7 +89,8 @@ export function ProjectsSection() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]" />
 
       {/* Decorative elements */}
-      <div className="absolute top-0 left-1/2 w-96 h-96 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-36 left-10 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-12 right-10 w-80 h-80 bg-gradient-to-br from-sky-500/10 to-purple-500/10 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -186,17 +201,17 @@ export function ProjectsSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <Button
-            variant="outline"
-            size="lg"
-            className="cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 px-8 py-6 text-lg rounded-2xl border-2 backdrop-blur-sm bg-white/80 dark:bg-slate-800/50 hover:bg-white/90 dark:hover:bg-slate-800/80 text-slate-700 dark:text-slate-300"
-            onClick={() => window.open("https://github.com/jajangrohmatulloh", "_blank", "noopener,noreferrer")}
+          <a
+            href="https://github.com/jajangrohmatulloh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 px-8 py-3 text-lg font-medium rounded-2xl border-2 border-slate-200 dark:border-slate-700 backdrop-blur-sm bg-white/80 dark:bg-slate-800/50 hover:bg-white/90 dark:hover:bg-slate-800/80 text-slate-700 dark:text-slate-300"
           >
             View All Projects
-            <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="ml-3 w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
             </svg>
-          </Button>
+          </a>
         </motion.div>
       </div>
     </section>

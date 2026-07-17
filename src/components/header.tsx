@@ -168,7 +168,7 @@ export function Header() {
                     type="button"
                     onClick={() => scrollToSection(link.href)}
                     aria-current={activeSection === link.href ? "page" : undefined}
-                    className={`w-full rounded-3xl border px-5 py-4 text-left text-base font-medium transition ${activeSection === link.href ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/20 hover:from-blue-700 hover:to-purple-700" : "border-slate-200 bg-slate-100 text-slate-900 hover:border-slate-300 hover:bg-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-700 dark:hover:bg-slate-800"}`}
+                    className={`w-full rounded-3xl border px-5 py-4 text-left text-base font-medium transition cursor-pointer ${activeSection === link.href ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/20 hover:from-blue-700 hover:to-purple-700" : "border-slate-200 bg-slate-100 text-slate-900 hover:border-slate-300 hover:bg-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-700 dark:hover:bg-slate-800"}`}
                   >
                     {link.label}
                   </button>
