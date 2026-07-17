@@ -65,7 +65,7 @@ function EmailContactCard() {
     <a
       href={`mailto:${contactEmail}`}
       onClick={() =>
-        toast.success("Email action ready!", {
+        toast.info("Email action ready!", {
           description: "Opening your mail client so you can send a message.",
           className: "cn-toast-email",
         })

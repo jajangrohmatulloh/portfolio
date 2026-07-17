@@ -16,15 +16,40 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+const siteUrl = process.env.SITE_URL ?? "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "Jajang Rohmatulloh - Full-Stack Developer",
-  description: "Full-Stack Developer passionate about creating beautiful and functional web applications. Specializing in React, Next.js, Node.js, and modern web technologies.",
-  keywords: ["Jajang Rohmatulloh", "Full-Stack Developer", "React", "Next.js", "Node.js", "Portfolio", "Indonesia"],
-  authors: [{ name: "Jajang Rohmatulloh" }],
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Jajang Rohmatulloh - Full-Stack Developer",
+    template: "%s | Jajang Rohmatulloh",
+  },
+  description:
+    "Full-stack developer turning ideas into working software — end to end, backend to browser. Started programming since 2019. Proficient and experienced in building APIs and services with Spring Boot, Go, Node.js, NestJS, Express.js, MySQL, PostgreSQL, MongoDB and responsive and interactive interfaces with React.js, Next.js, TypeScript, JavaScript, TailwindCSS, and SASS.",
+  keywords: [
+    "Jajang Rohmatulloh",
+    "Full-Stack Developer",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Portfolio",
+    "Web Developer",
+    "Indonesia",
+  ],
+  authors: [{ name: "Jajang Rohmatulloh", url: siteUrl }],
+  creator: "Jajang Rohmatulloh",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b1120" },
+  ],
   openGraph: {
     title: "Jajang Rohmatulloh - Full-Stack Developer",
-    description: "Full-Stack Developer passionate about creating beautiful and functional web applications.",
+    description:
+      "Full-Stack Developer passionate about creating beautiful and functional web applications.",
+    url: siteUrl,
+    siteName: "Jajang Rohmatulloh Portfolio",
     type: "website",
+    locale: "en_US",
     images: [
       {
         url: "/og-image.png",
@@ -37,12 +62,32 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Jajang Rohmatulloh - Full-Stack Developer",
-    description: "Full-Stack Developer passionate about creating beautiful and functional web applications.",
+    description:
+      "Full-Stack Developer passionate about creating beautiful and functional web applications.",
     images: ["/og-image.png"],
   },
   icons: {
     icon: "/favicon.svg",
     apple: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
+  manifest: "/site.webmanifest",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

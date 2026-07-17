@@ -65,7 +65,7 @@ export function HeroSection() {
           {/* Description */}
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Full-stack developer turning ideas into working software — end to end, backend to browser.
-            Experienced in building APIs and services with Spring Boot, Go, Node.js, NestJS, and Express.js, and responsive and interactive interfaces with React.js, Next.js, TypeScript, JavaScript, TailwindCSS, and SASS.
+            Started programming since 2019. Proficient and experienced in building APIs and services with Spring Boot, Go, Node.js, NestJS, Express.js, MySQL, PostgreSQL, MongoDB and responsive and interactive interfaces with React.js, Next.js, TypeScript, JavaScript, TailwindCSS, and SASS.
           </p>
 
           {/* CTA Buttons */}
