@@ -14,6 +14,7 @@ const projects = [
     gradient: "from-indigo-500 to-purple-500",
     shadowColor: "shadow-indigo-500/30",
     url: null,
+    buttonLabel: "Internal Project",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -41,7 +42,8 @@ const projects = [
     tags: ["Node.js", "Express.js", "Socket.IO", "TikTok Live API", "Text-to-Speech", "API Integration"],
     gradient: "from-pink-500 to-rose-500",
     shadowColor: "shadow-pink-500/30",
-    url: "https://github.com/jajangrohmatulloh/tiktok-live-connector",
+    url: null,
+    buttonLabel: "Not Publicly Deployed",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
@@ -56,6 +58,7 @@ const projects = [
     gradient: "from-emerald-500 to-teal-500",
     shadowColor: "shadow-emerald-500/30",
     url: null,
+    buttonLabel: "Internal Project",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9h8M8 13h5m-6 5h8a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -182,7 +185,7 @@ export function ProjectsSection() {
                       className={`!h-auto w-full cursor-default rounded-xl py-4 text-base font-medium shadow-lg ${project.shadowColor} bg-gradient-to-r ${project.gradient} opacity-75 transition-all duration-300 group/btn text-white`}
                       disabled
                     >
-                      Internal Project
+                      {project.buttonLabel}
                       <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                       </svg>
@@ -194,25 +197,6 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-12"
-        >
-          <a
-            href="https://github.com/jajangrohmatulloh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 px-8 py-3 text-lg font-medium rounded-2xl border-2 border-slate-200 dark:border-slate-700 backdrop-blur-sm bg-white/80 dark:bg-slate-800/50 hover:bg-white/90 dark:hover:bg-slate-800/80 text-slate-700 dark:text-slate-300"
-          >
-            View All Projects
-            <svg className="ml-3 w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-            </svg>
-          </a>
-        </motion.div>
       </div>
     </section>
   );
