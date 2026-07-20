@@ -34,7 +34,7 @@ export function HeroSection() {
         <div className="absolute -bottom-1/4 -left-1/4 w-[800px] h-[800px] bg-gradient-to-tr from-purple-400/15 via-pink-400/15 to-blue-400/15 dark:from-purple-500/20 dark:via-pink-500/20 dark:to-blue-500/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-12 sm:pt-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-12 sm:pt-16 md:pt-24">
         <div className="text-center">
           {/* Greeting Badge */}
           <Badge
