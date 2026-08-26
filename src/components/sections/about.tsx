@@ -15,7 +15,7 @@ const experiences = [
   },
   {
     company: "Global Infotech Solution",
-    role: "System Engineer L1",
+    role: "System Engineer L1 (Holding Salesforce)",
     period: "Feb 2023 – May 2024 • On-site",
     description: "Built a mobile and web application using React Native and React.js. Customized and developed a Salesforce application and integrated Google Drive, reducing manual processes by 15%. Earned 3 certifications (Salesforce Administrator, Developer, and MuleSoft Developer) and updated technical documentation for client-facing projects.",
   },
@@ -70,7 +70,7 @@ export function AboutSection() {
                   fill
                   sizes="(max-width: 768px) 100vw, 288px"
                   className="object-cover"
-                  style={{ objectPosition: 'center 20%' }}
+                  style={{ objectPosition: 'center 35%' }}
                   loading="lazy"
                 />
               </div>
