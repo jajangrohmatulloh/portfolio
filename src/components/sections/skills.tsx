@@ -13,7 +13,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-blue-500 to-cyan-500",
-    skills: ["Next.js", "React.js", "Angular", "Vue.js", "Redux", "Pinia", "TailwindCSS", "Bootstrap", "SASS", "TypeScript", "JavaScript", "HTML", "CSS", "React Testing Library", "Micro Frontends"],
+    skills: ["Next.js", "React", "Angular", "Vue.js", "Redux", "Pinia", "TailwindCSS", "Bootstrap", "SASS", "TypeScript", "JavaScript", "HTML", "CSS", "React Testing Library", "Micro Frontends"],
   },
   {
     title: "Backend Development",
@@ -23,7 +23,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-purple-500 to-pink-500",
-    skills: ["Spring Boot", "NestJS", "Express.js", "Java", "Go", "Node.js", "JUnit", "Mockito", "Jest", "REST API", "GraphQL", "Microservices"],
+    skills: ["Spring Boot", "NestJS", "Express.js", "Java", "Go", "Node.js", "JUnit", "Mockito", "Jest", "REST API", "SOAP API", "gRPC", "GraphQL", "Microservices"],
   },
   {
     title: "Databases & Tools",
@@ -33,7 +33,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-orange-500 to-yellow-500",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Supabase", "Firebase", "Vite", "Webpack", "Kafka", "Docker", "Git", "Jira", "Claude Code", "Cursor"],
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Supabase", "Firebase", "Vite", "Webpack", "Kafka", "Docker", "Git", "GitHub", "Jira", "Confluence", "Cursor", "Claude Code", "GitHub Copilot"],
   },
 ];
 

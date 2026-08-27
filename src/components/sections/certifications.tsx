@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+import platformAdminBadge from "@/assets/badges/salesforce-certified-administrator.png";
 import jsDevBadge from "@/assets/badges/salesforce-certified-javascript-developer-i.png";
 import platformDevIBadge from "@/assets/badges/salesforce-certified-platform-developer-i.png";
 import platformDevIIBadge from "@/assets/badges/salesforce-certified-platform-developer-ii.png";
@@ -29,6 +30,12 @@ const certifications = [
     issuer: "Salesforce",
     badge: platformDevIIBadge,
     url: "https://drive.google.com/file/d/15naqy4vL2yiGbrGYgIdwqhA5in0DR-Mh/view?usp=drive_link",
+  },
+  {
+    name: "Salesforce Certified Platform Administrator",
+    issuer: "Salesforce",
+    badge: platformAdminBadge,
+    url: "https://drive.google.com/file/d/1NSaYvFpjnXxaPqu0ydZme77pfUhbiaPv/view?usp=drive_link",
   },
   {
     name: "MuleSoft Certified Integration Associate",
