@@ -13,7 +13,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-blue-500 to-cyan-500",
-    skills: ["Next.js", "React", "Angular", "Vue.js", "Redux", "Pinia", "TailwindCSS", "Bootstrap", "SASS", "TypeScript", "JavaScript", "HTML", "CSS", "React Testing Library", "Micro Frontends"],
+    skills: ["Next.js", "React", "Angular", "Vue.js", "Redux", "Pinia", "TailwindCSS", "Bootstrap", "SASS", "TypeScript", "JavaScript", "HTML", "CSS", "React Testing Library", "Micro Frontends", "Core Web Vitals", "WCAG", "SEO"],
   },
   {
     title: "Backend Development",
