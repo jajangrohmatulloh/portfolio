@@ -65,7 +65,7 @@ export function HeroSection() {
           {/* Description */}
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Full-stack developer with 6+ years of experience turning ideas into working software — end to end, backend to browser.
-            Experienced in building responsive and interactive interfaces with React, Next.js, TypeScript, JavaScript, TailwindCSS, and SASS and building APIs and services with Spring Boot, Go, Node.js, NestJS, Express.js, MySQL, PostgreSQL, and MongoDB.
+            Experienced in building responsive and interactive interfaces with React, Next.js, TypeScript, JavaScript, TailwindCSS, and SASS, and in building APIs and services with Spring Boot, Go, Node.js, NestJS, Express.js, MySQL, PostgreSQL, and MongoDB.
           </p>
 
           {/* CTA Buttons */}
