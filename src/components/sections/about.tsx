@@ -9,9 +9,9 @@ import Image from "next/image";
 const experiences = [
   {
     company: "Infinity Connection Group",
-    role: "Full-Stack Developer",
+    role: "Full Stack Engineer",
     period: "May 2024 – Jul 2024 • Remote (Project-based)",
-    description: "Designed and built full-stack web applications with focus on security and performance. Implemented secure authentication, input validation, and optimized code structure to protect data and prevent vulnerabilities.",
+    description: "Designed and built a frontend and backend web application with focus on security and performance. Implemented secure authentication, input validation, and optimized code structure to protect data and prevent vulnerabilities.",
   },
   {
     company: "Global Infotech Solution",

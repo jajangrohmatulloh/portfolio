@@ -153,7 +153,7 @@ export function SkillsSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-white">English</h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Professional</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">Fluent</p>
                 </div>
               </CardContent>
             </Card>
