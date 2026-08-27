@@ -69,7 +69,7 @@ const projects = [
     name: "ZENITH",
     tagline: "Manage your tasks and focus on what matters",
     description: "A powerful task management system designed to help you organize your work, track progress, and achieve your goals efficiently.",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "Supabase", "API Integration"],
+    tags: ["Next.js", "React", "TypeScript", "TailwindCSS", "Supabase", "API Integration"],
     gradient: "from-purple-500 to-pink-500",
     shadowColor: "shadow-purple-500/30",
     url: "https://zenith-two-pearl.vercel.app/",
