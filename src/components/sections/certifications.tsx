@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-import platformAdminBadge from "@/assets/badges/salesforce-certified-administrator.png";
+import platformAdminBadge from "@/assets/badges/salesforce-certified-platform-administrator.png";
 import jsDevBadge from "@/assets/badges/salesforce-certified-javascript-developer-i.png";
 import platformDevIBadge from "@/assets/badges/salesforce-certified-platform-developer-i.png";
 import platformDevIIBadge from "@/assets/badges/salesforce-certified-platform-developer-ii.png";
