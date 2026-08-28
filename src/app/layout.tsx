@@ -21,14 +21,14 @@ const siteUrl = process.env.SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Jajang Rohmatulloh - Full-Stack Developer",
+    default: "Jajang Rohmatulloh - Full Stack Engineer",
     template: "%s | Jajang Rohmatulloh",
   },
   description:
-    "Full-stack developer turning ideas into working software — end to end, backend to browser. Started programming since 2019. Proficient and experienced in building APIs and services with Spring Boot, Go, Node.js, NestJS, Express.js, MySQL, PostgreSQL, MongoDB and responsive and interactive interfaces with React.js, Next.js, TypeScript, JavaScript, TailwindCSS, and SASS.",
+    "Full stack engineer with 6+ years of experience turning ideas into working software — end to end, backend to browser. Experienced in building responsive and interactive interfaces with React, Next.js, TypeScript, JavaScript, TailwindCSS, and SASS. My focus is Core Web Vitals, Accessibility, SEO, frontend architecture, and performance at scale - not just writing components, but making sure they load fast, are accessible, and rank well — and in building APIs and services with Spring Boot, Go, Node.js, NestJS, Express.js, MySQL, PostgreSQL, and MongoDB.",
   keywords: [
     "Jajang Rohmatulloh",
-    "Full-Stack Developer",
+    "Full Stack Engineer",
     "React",
     "Next.js",
     "Node.js",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#0b1120" },
   ],
   openGraph: {
-    title: "Jajang Rohmatulloh - Full-Stack Developer",
+    title: "Jajang Rohmatulloh - Full Stack Engineer",
     description:
-      "Full-Stack Developer passionate about creating beautiful and functional web applications.",
+      "Full Stack Engineer passionate about creating beautiful and functional web applications.",
     url: siteUrl,
     siteName: "Jajang Rohmatulloh Portfolio",
     type: "website",
@@ -55,15 +55,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Jajang Rohmatulloh - Full-Stack Developer Portfolio",
+        alt: "Jajang Rohmatulloh - Full Stack Engineer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jajang Rohmatulloh - Full-Stack Developer",
+    title: "Jajang Rohmatulloh - Full Stack Engineer",
     description:
-      "Full-Stack Developer passionate about creating beautiful and functional web applications.",
+      "Full Stack Engineer passionate about creating beautiful and functional web applications.",
     images: ["/og-image.png"],
   },
   icons: {
