@@ -123,7 +123,7 @@ export function SkillsSection() {
         </div>
 
         {/* Languages */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -158,7 +158,7 @@ export function SkillsSection() {
               </CardContent>
             </Card>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

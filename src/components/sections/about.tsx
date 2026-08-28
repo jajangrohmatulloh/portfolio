@@ -17,7 +17,7 @@ const experiences = [
     company: "Global Infotech Solution",
     role: "System Engineer L1 (Holding Salesforce Developer Role)",
     period: "Feb 2023 – May 2024 • On-site",
-    description: "Built a mobile and web application using React Native and React. Customized and developed a Salesforce application and integrated Google Drive, reducing manual processes by 15%. Earned 4+ certifications (Salesforce Administrator, Developer, and MuleSoft Developer) and updated technical documentation for client-facing projects.",
+    description: "Built a mobile and web application using React Native and React. Customized and developed a Salesforce application and integrated Google Drive, reducing manual processes by 15%. Earned 4+ certifications (Salesforce Administrator, Salesforce Developer, and MuleSoft Developer) and updated technical documentation for client-facing projects.",
   },
 ];
 
@@ -103,21 +103,21 @@ export function AboutSection() {
             className="space-y-6"
           >
             {/* Stats */}
-            <div className="pt-4">
+            {/* <div className="pt-4">
               <Card className="transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden group">
                 <CardContent className="p-6 text-center relative">
                   <p className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">1+</p>
                   <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">Year of Professional Experience</p>
                 </CardContent>
               </Card>
-            </div>
+            </div> */}
 
             {/* Contact Info */}
             <div className="pt-4">
-              <div className="flex flex-wrap gap-4 justify-center">
+              <div className="relative mx-auto flex flex-wrap justify-center gap-4 md:h-28 md:w-[200px] md:items-end md:gap-0">
                 <a
                   href="mailto:jajangrohmatulloh57@gmail.com"
-                  className="group relative"
+                  className="group relative md:absolute md:left-1/2 md:top-0 md:-translate-x-1/2"
                   title="Email"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white shadow-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-110 hover:-translate-y-1 cursor-pointer">
@@ -134,7 +134,7 @@ export function AboutSection() {
                   href="https://linkedin.com/in/jajangrohmatulloh"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative"
+                  className="group relative md:absolute md:left-1 md:bottom-0"
                   title="LinkedIn"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white shadow-lg hover:shadow-2xl hover:shadow-blue-600/40 transition-all duration-300 hover:scale-110 hover:-translate-y-1 cursor-pointer">
@@ -151,7 +151,7 @@ export function AboutSection() {
                   href="https://wa.me/6285722744207"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative"
+                  className="group relative md:absolute md:right-1 md:bottom-0"
                   title="WhatsApp"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white shadow-lg hover:shadow-2xl hover:shadow-green-500/40 transition-all duration-300 hover:scale-110 hover:-translate-y-1 cursor-pointer">
