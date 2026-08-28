@@ -71,6 +71,9 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
+  verification: {
+    google: "VaWU704-42HZSy3EyPKoBG2nZy2BsDN8lMkmnz1CQsg",
+  },
   manifest: "/site.webmanifest",
   alternates: {
     canonical: "/",
