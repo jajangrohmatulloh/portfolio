@@ -79,6 +79,22 @@ const projects = [
       </svg>
     ),
   },
+  {
+    name: "Face Recognition App",
+    tagline: "Student face and behavior & attendance monitoring (YOLO)",
+    description:
+      "An application designed for classroom monitoring that uses OpenCV and YOLO for real-time face detection, recognition, and eye/state analysis. Behavior classification and attendance events are logged to an SQL database. Detects behaviors such as Raise Hand, Using Phone, Drowsy, Sleeping, and Looking Left/Right. Operation modes: 'Learn' and 'Exam' — monitor specified behaviors; 'Attendance' — presence logging.",
+    tags: ["Python", "OpenCV", "YOLO", "Face Recognition", "Behavior Detection", "Attendance", "Education", "edtech", "MySQL", "AI", "Machine Learning", "Camera"],
+    gradient: "from-green-500 to-lime-500",
+    shadowColor: "shadow-green-500/30",
+    url: null,
+    buttonLabel: "Not Publicly Deployed",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7h2l2-3h8l2 3h2a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V8a1 1 0 011-1zM12 15a3 3 0 100-6 3 3 0 000 6z" />
+      </svg>
+    ),
+  },
 ];
 
 export function ProjectsSection() {
