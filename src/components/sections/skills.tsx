@@ -123,7 +123,7 @@ export function SkillsSection() {
         </div>
 
         {/* Languages */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -135,7 +135,7 @@ export function SkillsSection() {
             </span>
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            {/* <Card className="transition-all duration-300 hover:shadow-lg hover:scale-105 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+            <Card className="transition-all duration-300 hover:shadow-lg hover:scale-105 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
               <CardContent className="p-6 flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-white flex items-center justify-center text-2xl flex-shrink-0 border border-slate-200 dark:border-slate-700">
                   🇮🇩
@@ -145,7 +145,7 @@ export function SkillsSection() {
                   <p className="text-sm text-slate-600 dark:text-slate-400">Native</p>
                 </div>
               </CardContent>
-            </Card> */}
+            </Card>
             <Card className="transition-all duration-300 hover:shadow-lg hover:scale-105 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
               <CardContent className="p-6 flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center text-2xl flex-shrink-0 border border-slate-200 dark:border-slate-700">
@@ -153,7 +153,7 @@ export function SkillsSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-white">English</h4>
-                  {/* <p className="text-sm text-slate-600 dark:text-slate-400">Fluent</p> */}
+                  <p className="text-sm text-slate-600 dark:text-slate-400">Fluent</p>
                 </div>
               </CardContent>
             </Card>
@@ -164,12 +164,12 @@ export function SkillsSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-white">Arabic</h4>
-                  {/* <p className="text-sm text-slate-600 dark:text-slate-400">Elementary</p> */}
+                  <p className="text-sm text-slate-600 dark:text-slate-400">Elementary</p>
                 </div>
               </CardContent>
             </Card>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
