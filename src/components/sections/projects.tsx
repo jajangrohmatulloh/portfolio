@@ -39,7 +39,7 @@ const projects = [
     name: "TIKTOK LIVE GIFTVOICE",
     tagline: "Engage viewers with live gift-triggered audio",
     description: "A tool that connects to TikTok Live streams and triggers audio responses when viewers send gifts — like automated thank-you messages played through the device speaker that live viewers can hear. Designed to encourage viewer engagement and increase gift frequency.",
-    tags: ["Node.js", "Express.js", "Socket.IO", "TikTok Live API", "Text-to-Speech", "API Integration"],
+    tags: ["Node.js", "Express.js", "Socket.IO", "TikTok Live Connector", "Text-to-Speech", "API Integration"],
     gradient: "from-pink-500 to-rose-500",
     shadowColor: "shadow-pink-500/30",
     url: null,
