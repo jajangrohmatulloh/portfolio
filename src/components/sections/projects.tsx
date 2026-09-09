@@ -83,7 +83,7 @@ const projects = [
     name: "Face Recognition App",
     tagline: "Student face and behavior & attendance monitoring (YOLO)",
     description:
-      "An application designed for classroom monitoring that uses OpenCV and YOLO for real-time face detection, recognition, and eye/state analysis. Behavior classification and attendance events are logged to an SQL database. Detects behaviors such as Raise Hand, Using Phone, Drowsy, Sleeping, and Looking Left/Right. Operation modes: 'Learn' and 'Exam' — monitor specified behaviors; 'Attendance' — presence logging.",
+      "An application designed for student monitoring that uses OpenCV and YOLO for real-time face detection, recognition. Behavior classification and attendance are logged to an SQL database. Detects behaviors such as Raise Hand, Using Phone, Drowsy, Sleeping, and Looking Left/Right. Operation modes: 'Learn' and 'Exam' — monitor specified behaviors; 'Attendance' — presence logging.",
     tags: ["Python", "OpenCV", "YOLO", "Face Recognition", "Behavior Detection", "MySQL", "AI", "Camera"],
     gradient: "from-green-500 to-lime-500",
     shadowColor: "shadow-green-500/30",
