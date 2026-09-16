@@ -15,9 +15,9 @@ const experiences = [
   },
   {
     company: "Global Infotech Solution",
-    role: "System Engineer L1 (Holding Salesforce Developer Role)",
+    role: "System Engineer L1 (Handling Full Stack & Salesforce Development)",
     period: "Feb 2023 – May 2024 • On-site",
-    description: "Built a mobile and web application using React Native and React. Customized and developed a Salesforce application and integrated Google Drive, reducing manual processes by 15%. Earned 4+ certifications (Salesforce Administrator, Salesforce Developer, and MuleSoft Developer) and updated technical documentation for client-facing projects.",
+    description: "Built a mobile and web application using React Native, React, and Node.js. Customized and developed a Salesforce application and integrated Google Drive, reducing manual processes by 15%. Earned 5+ certifications (Salesforce Administrator, Salesforce Developer, and MuleSoft Developer) and updated technical documentation for client-facing projects.",
   },
 ];
 
