@@ -31,12 +31,12 @@ const certifications = [
     badge: platformDevIIBadge,
     url: "https://drive.google.com/file/d/15naqy4vL2yiGbrGYgIdwqhA5in0DR-Mh/view?usp=drive_link",
   },
-  {
-    name: "Salesforce Certified Platform Administrator",
-    issuer: "Salesforce",
-    badge: platformAdminBadge,
-    url: "https://drive.google.com/file/d/1NSaYvFpjnXxaPqu0ydZme77pfUhbiaPv/view?usp=drive_link",
-  },
+  // {
+  //   name: "Salesforce Certified Platform Administrator",
+  //   issuer: "Salesforce",
+  //   badge: platformAdminBadge,
+  //   url: "https://drive.google.com/file/d/1NSaYvFpjnXxaPqu0ydZme77pfUhbiaPv/view?usp=drive_link",
+  // },
   {
     name: "MuleSoft Certified Integration Associate",
     issuer: "MuleSoft",
