@@ -254,7 +254,7 @@ export function ContactSection() {
                   <div>
                     <CardTitle className="text-xl text-slate-900 dark:text-white">Send me a message</CardTitle>
                     <CardDescription className="text-slate-600 dark:text-slate-400 text-sm">
-                      I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                      I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
                     </CardDescription>
                   </div>
                 </div>
