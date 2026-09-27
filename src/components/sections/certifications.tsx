@@ -38,14 +38,14 @@ const certifications = [
   //   url: "https://drive.google.com/file/d/1NSaYvFpjnXxaPqu0ydZme77pfUhbiaPv/view?usp=drive_link",
   // },
   {
-    name: "MuleSoft Certified Integration Associate",
-    issuer: "MuleSoft",
+    name: "MuleSoft Certified MuleSoft Integration Associate",
+    issuer: "Salesforce",
     badge: muleSoftIntegrationBadge,
     url: "https://drive.google.com/file/d/1pQJSGXOfUZcTAkgq0G290GtaPmqi6AaK/view?usp=drive_link",
   },
   {
-    name: "MuleSoft Certified Developer - Level 1",
-    issuer: "MuleSoft",
+    name: "Salesforce Certified MuleSoft Developer Level 1",
+    issuer: "Salesforce",
     badge: muleSoftDevBadge,
     url: "https://drive.google.com/file/d/1kOvtI2szbUgwVR6H4zvaxPfIniuMbJ2Q/view?usp=drive_link",
   },
