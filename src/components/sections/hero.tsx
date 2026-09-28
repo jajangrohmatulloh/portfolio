@@ -57,14 +57,14 @@ export function HeroSection() {
           <p className="text-lg sm:text-xl md:text-2xl text-slate-700 dark:text-slate-400 mb-8 max-w-3xl mx-auto font-medium">
             <span className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 dark:from-blue-500/20 dark:via-purple-500/20 dark:to-pink-500/20 border border-slate-200 dark:border-slate-700 backdrop-blur-sm">
               <span className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
-              Salesforce Solution Architect
+              Salesforce Technical Architect
               <span className="w-3 h-3 bg-purple-500 rounded-full animate-pulse" />
             </span>
           </p>
 
           {/* Description */}
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Experienced Salesforce Solution Architect with Salesforce experience since 2023, holding 5+ certifications including Salesforce and MuleSoft. Skilled in Sales Cloud, Service Cloud, Financial Services Cloud, Marketing Cloud Account Engagement, Data 360, Commerce Cloud, OmniStudio, Experience Cloud, Agentforce, and integration, with experience delivering Salesforce solutions from business process design and architecture to deployment, including a Sales Pipeline application with a Google Drive integration that reduced manual steps in customer registration by an estimated 15%. Committed to building scalable, secure, and maintainable solutions.
+            Experienced Salesforce Technical Architect with Salesforce experience since 2023 and software development experience since 2019, holding 5+ certifications including Platform Developer I & II, Administrator, and MuleSoft Developer. Skilled in Apex, LWC, React, Visualforce, Aura, Cloud, and API integration, with experience delivering Salesforce solutions from architecture, development, configuration to deployment, including a Sales Pipeline application with a Google Drive integration that reduced manual steps by an estimated 15%. Backed by a strong full stack foundation (React, Node.js, Java, JavaScript), I build scalable, secure, and maintainable solutions.
           </p>
 
           {/* CTA Buttons */}
