@@ -9,8 +9,8 @@ const projects = [
   {
     name: "SALES PIPELINE",
     tagline: "Track your deals and boost team productivity",
-    description: "A customer management application — an internal web-based Salesforce tool enabling sales teams to manage deal pipelines, improve cross-team collaboration, and increase overall productivity through streamlined workflow automation.",
-    tags: ["Salesforce", "Apex", "Visualforce", "JavaScript", "API Integration"],
+    description: "A customer management application — an internal web-based Salesforce tool enabling sales teams to manage deal pipelines, improve cross-team collaboration, and increase overall productivity through business process design, workflow automation, and streamlined pipeline operations.",
+    tags: ["Salesforce", "Business Process Design", "Apex", "Flow", "JavaScript", "API Integration"],
     gradient: "from-indigo-500 to-purple-500",
     shadowColor: "shadow-indigo-500/30",
     url: null,
@@ -91,7 +91,8 @@ const projects = [
     buttonLabel: "Not Publicly Deployed",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7h2l2-3h8l2 3h2a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V8a1 1 0 011-1zM12 15a3 3 0 100-6 3 3 0 000 6z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.75 8.75A2.75 2.75 0 0 1 6.5 6h2.2l1.15-1.6A1.5 1.5 0 0 1 11.1 4h1.8a1.5 1.5 0 0 1 1.25.8L15.3 6h2.2a2.75 2.75 0 0 1 2.75 2.75v7.5A2.75 2.75 0 0 1 17.5 19h-11A2.75 2.75 0 0 1 3.75 16.25v-7.5Z" />
+        <circle cx="12" cy="12.5" r="3.25" strokeWidth={2} />
       </svg>
     ),
   },

@@ -21,20 +21,21 @@ const siteUrl = process.env.SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Jajang Rohmatulloh - Salesforce Developer",
+    default: "Jajang Rohmatulloh - Salesforce Solution Architect",
     template: "%s | Jajang Rohmatulloh",
   },
   description:
-    "Experienced Salesforce Developer with Salesforce experience since 2023 and software development experience since 2019, holding 5+ certifications including Platform Developer I & II, Administrator, and MuleSoft Developer. Skilled in Apex, LWC, React, Visualforce, Aura, and API integration, with experience delivering end-to-end Salesforce solutions from business process design, architecture, development, and configuration to deployment. I have built a Sales Pipeline application and a Google Drive integration that reduced manual steps in customer registration by an estimated 15%. I build scalable, secure, and maintainable applications.",
+    "Experienced Salesforce Solution Architect with Salesforce experience since 2023, holding 5+ certifications including Salesforce and MuleSoft. Skilled in Sales Cloud, Service Cloud, Financial Services Cloud, Marketing Cloud Account Engagement, Data 360, Commerce Cloud, OmniStudio, Experience Cloud, Agentforce, and integration, with experience delivering Salesforce solutions from business process design and architecture to deployment, including a Sales Pipeline application with a Google Drive integration that reduced manual steps in customer registration by an estimated 15%. Committed to building scalable, secure, and maintainable solutions.",
   keywords: [
     "Jajang Rohmatulloh",
-    "Salesforce Developer",
-    "Apex",
-    "LWC",
-    "Salesforce",
+    "Salesforce Solution Architect",
+    "Salesforce Architect",
+    "Flow",
+    "OmniStudio",
+    "Agentforce",
     "MuleSoft",
-    "Platform Developer",
-    "CRM Developer",
+    "Salesforce",
+    "CRM Architecture",
     "Portfolio",
   ],
   authors: [{ name: "Jajang Rohmatulloh", url: siteUrl }],
@@ -44,9 +45,9 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#0b1120" },
   ],
   openGraph: {
-    title: "Jajang Rohmatulloh - Salesforce Developer",
+    title: "Jajang Rohmatulloh - Salesforce Solution Architect",
     description:
-      "Salesforce Developer delivering scalable, secure, and maintainable CRM solutions with Apex, LWC, integrations, and enterprise automation.",
+      "Salesforce Solution Architect designing business-aligned CRM solutions, enterprise integrations, and scalable Salesforce implementations.",
     url: siteUrl,
     siteName: "Jajang Rohmatulloh Portfolio",
     type: "website",
@@ -56,15 +57,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Jajang Rohmatulloh - Salesforce Developer Portfolio",
+        alt: "Jajang Rohmatulloh - Salesforce Solution Architect Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jajang Rohmatulloh - Salesforce Developer",
+    title: "Jajang Rohmatulloh - Salesforce Solution Architect",
     description:
-      "Salesforce Developer delivering scalable, secure, and maintainable CRM solutions with Apex, LWC, integrations, and enterprise automation.",
+      "Salesforce Solution Architect designing business-aligned CRM solutions, enterprise integrations, and scalable Salesforce implementations",
     images: ["/og-image.png"],
   },
   icons: {

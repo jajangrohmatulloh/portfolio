@@ -48,7 +48,7 @@ const contactMethods = [
     ),
   },
   {
-    label: "Trailhead",
+    label: "Trailblazer",
     value: "salesforce.com/trailblazer/jajangrohmatulloh",
     href: "https://www.salesforce.com/trailblazer/jajangrohmatulloh",
     gradient: "from-blue-500 to-cyan-500",
@@ -340,7 +340,7 @@ export function ContactSection() {
                           <FormLabel className="font-medium text-slate-700 dark:text-slate-300 text-sm">Message</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Hi, I would like to collaborate with you on a Salesforce development project..."
+                              placeholder="Hi, I would like to collaborate with you on a Salesforce project..."
                               className="min-h-[140px] transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 rounded-xl resize-none bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white border-slate-200 dark:border-slate-700"
                               disabled={isSubmitting}
                               {...field}

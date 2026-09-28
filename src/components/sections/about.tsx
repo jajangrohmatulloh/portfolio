@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import personImage from "@/assets/img/person.webp";
+import salesforceLogo from "@/assets/icons/salesforce_logo.jpeg";
 import Image from "next/image";
 
 const experiences = [
@@ -15,9 +16,9 @@ const experiences = [
   },
   {
     company: "Global Infotech Solution",
-    role: "System Engineer L1 (Handled Salesforce Development)",
+    role: "System Engineer L1 (Handled Salesforce)",
     period: "Feb 2023 – May 2024 • On-site",
-    description: "Customized and developed a Salesforce application and integrated Google Drive, reducing manual processes by 15%. Authored technical documentation to understand product usage. Earned 5+ certifications (Salesforce Administrator, Salesforce Developer, and MuleSoft Developer). Built a mobile and web application using React Native, React, and Node.js.",
+    description: "Designed a business process, architected solutions, and implemented them in Salesforce. Customized and developed a Salesforce application and integrated Google Drive, reducing manual processes by 15%. Authored technical documentation to understand product usage. Earned 5+ certifications (Salesforce Administrator, Salesforce Developer, and MuleSoft Developer).",
   },
 ];
 
@@ -77,18 +78,34 @@ export function AboutSection() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 -right-4 px-4 py-2 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700"
+                className="absolute -top-4 -right-4 w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden p-0"
               >
-                <span className="text-2xl">💻</span>
+                <Image
+                  src={salesforceLogo}
+                  alt="Salesforce logo"
+                  width={96}
+                  height={96}
+                  className="object-contain scale-[1.6]"
+                  priority
+                />
               </motion.div>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity }}
-                className="absolute -bottom-4 -left-4 px-4 py-3 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700"
+                className="absolute -bottom-4 -left-4 w-16 h-16 flex items-center justify-center rounded-2xl shadow-xl border border-slate-200 bg-white dark:bg-slate-800"
               >
-                <svg className="w-6 h-6 text-slate-900 dark:text-slate-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
+                <svg className="w-10 h-10" viewBox="0 0 220 220" aria-hidden="true">
+                  <g transform="translate(110,110) scale(2)">
+                    <polygon points="0,-56 48.5,-28 48.5,28 0,56 -48.5,28 -48.5,-28" fill="#185FA5"/>
+                    <g stroke="#FFFFFF" strokeWidth="4" strokeLinecap="round" fill="none">
+                      <line x1="0" y1="-28" x2="-22" y2="24" />
+                      <line x1="0" y1="-28" x2="22" y2="24" />
+                      <line x1="-22" y1="24" x2="22" y2="24" />
+                    </g>
+                    <circle cx="0" cy="-28" r="7" fill="#FFFFFF" />
+                    <circle cx="-22" cy="24" r="7" fill="#FFFFFF" />
+                    <circle cx="22" cy="24" r="7" fill="#FFFFFF" />
+                  </g>
                 </svg>
               </motion.div>
             </div>
