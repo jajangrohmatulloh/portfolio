@@ -47,6 +47,19 @@ const contactMethods = [
       </svg>
     ),
   },
+  {
+    label: "Trailhead",
+    value: "salesforce.com/trailblazer/jajangrohmatulloh",
+    href: "https://www.salesforce.com/trailblazer/jajangrohmatulloh",
+    gradient: "from-blue-500 to-cyan-500",
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 2.8 18.2 6.5v11L12 21.2 5.8 17.5v-11L12 2.8Z" />
+        <path d="M12 6.5 15.4 9.5 12 12.5 8.6 9.5 12 6.5Z" />
+        <path d="M8.6 13.3 12 16.2l3.4-2.9" />
+      </svg>
+    ),
+  },
   // {
   //   label: "WhatsApp",
   //   value: "+62 857-2274-4207",
@@ -327,7 +340,7 @@ export function ContactSection() {
                           <FormLabel className="font-medium text-slate-700 dark:text-slate-300 text-sm">Message</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Hi, I would like to collaborate with you on a web development project..."
+                              placeholder="Hi, I would like to collaborate with you on a Salesforce development project..."
                               className="min-h-[140px] transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 rounded-xl resize-none bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white border-slate-200 dark:border-slate-700"
                               disabled={isSubmitting}
                               {...field}

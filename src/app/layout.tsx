@@ -21,20 +21,21 @@ const siteUrl = process.env.SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Jajang Rohmatulloh - Full Stack Engineer",
+    default: "Jajang Rohmatulloh - Salesforce Developer",
     template: "%s | Jajang Rohmatulloh",
   },
   description:
-    "Full stack engineer with 6+ years of experience turning ideas into working software — end to end, backend to browser. Experienced in building responsive and interactive interfaces with React, Next.js, TypeScript, JavaScript, TailwindCSS, and SASS. My focus is Core Web Vitals, Accessibility, SEO, frontend architecture, and performance at scale - not just writing components, but making sure they load fast, are accessible, and rank well — and in building APIs and services with Spring Boot, Go, Node.js, NestJS, Express.js, MySQL, PostgreSQL, and MongoDB.",
+    "Experienced Salesforce Developer with Salesforce experience since 2023 and software development experience since 2019, holding 5+ certifications including Platform Developer I & II, Administrator, and MuleSoft Developer. Skilled in Apex, LWC, React, Visualforce, Aura, and API integration, with experience delivering end-to-end Salesforce solutions from business process design, architecture, development, and configuration to deployment. I have built a Sales Pipeline application and a Google Drive integration that reduced manual steps in customer registration by an estimated 15%. I build scalable, secure, and maintainable applications.",
   keywords: [
     "Jajang Rohmatulloh",
-    "Full Stack Engineer",
-    "React",
-    "Next.js",
-    "Node.js",
+    "Salesforce Developer",
+    "Apex",
+    "LWC",
+    "Salesforce",
+    "MuleSoft",
+    "Platform Developer",
+    "CRM Developer",
     "Portfolio",
-    "Web Developer",
-    "Indonesia",
   ],
   authors: [{ name: "Jajang Rohmatulloh", url: siteUrl }],
   creator: "Jajang Rohmatulloh",
@@ -43,9 +44,9 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#0b1120" },
   ],
   openGraph: {
-    title: "Jajang Rohmatulloh - Full Stack Engineer",
+    title: "Jajang Rohmatulloh - Salesforce Developer",
     description:
-      "Full Stack Engineer passionate about creating beautiful and functional web applications.",
+      "Salesforce Developer delivering scalable, secure, and maintainable CRM solutions with Apex, LWC, integrations, and enterprise automation.",
     url: siteUrl,
     siteName: "Jajang Rohmatulloh Portfolio",
     type: "website",
@@ -55,15 +56,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Jajang Rohmatulloh - Full Stack Engineer Portfolio",
+        alt: "Jajang Rohmatulloh - Salesforce Developer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jajang Rohmatulloh - Full Stack Engineer",
+    title: "Jajang Rohmatulloh - Salesforce Developer",
     description:
-      "Full Stack Engineer passionate about creating beautiful and functional web applications.",
+      "Salesforce Developer delivering scalable, secure, and maintainable CRM solutions with Apex, LWC, integrations, and enterprise automation.",
     images: ["/og-image.png"],
   },
   icons: {

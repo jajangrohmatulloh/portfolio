@@ -15,7 +15,7 @@ const experiences = [
   },
   {
     company: "Global Infotech Solution",
-    role: "System Engineer L1 (Handled Full Stack Development)",
+    role: "System Engineer L1 (Handled Salesforce Development)",
     period: "Feb 2023 – May 2024 • On-site",
     description: "Built a mobile and web application using React Native, React, and Node.js. Customized and developed a Salesforce application and integrated Google Drive, reducing manual processes by 15%. Earned 5+ certifications (Salesforce Administrator, Salesforce Developer, and MuleSoft Developer) and updated technical documentation for client-facing projects.",
   },
@@ -144,6 +144,25 @@ export function AboutSection() {
                   </div>
                   <span className="text-xs font-medium text-slate-600 dark:text-slate-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     LinkedIn
+                  </span>
+                </a>
+
+                <a
+                  href="https://www.salesforce.com/trailblazer/jajangrohmatulloh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col items-center gap-2"
+                  title="Trailblazer"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white shadow-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-110 hover:-translate-y-1 cursor-pointer">
+                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 2.8 18.2 6.5v11L12 21.2 5.8 17.5v-11L12 2.8Z" />
+        <path d="M12 6.5 15.4 9.5 12 12.5 8.6 9.5 12 6.5Z" />
+        <path d="M8.6 13.3 12 16.2l3.4-2.9" />
+      </svg>
+                  </div>
+                  <span className="text-xs font-medium text-slate-600 dark:text-slate-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    Trailblazer
                   </span>
                 </a>
 

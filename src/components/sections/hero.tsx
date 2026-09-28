@@ -57,14 +57,14 @@ export function HeroSection() {
           <p className="text-lg sm:text-xl md:text-2xl text-slate-700 dark:text-slate-400 mb-8 max-w-3xl mx-auto font-medium">
             <span className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 dark:from-blue-500/20 dark:via-purple-500/20 dark:to-pink-500/20 border border-slate-200 dark:border-slate-700 backdrop-blur-sm">
               <span className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
-              Full Stack/Frontend Engineer
+              Salesforce Developer
               <span className="w-3 h-3 bg-purple-500 rounded-full animate-pulse" />
             </span>
           </p>
 
           {/* Description */}
-          <p className="text-lg text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Full stack/frontend engineer with engineering experience since 2019 who turns ideas into working software — end to end, backend to browser. Experienced in building responsive, interactive interfaces with React, Next.js, TypeScript, JavaScript, Tailwind CSS, HTML, CSS, and SASS, and in developing APIs and services with Spring Boot, Go, Node.js, NestJS, Express.js, MySQL, PostgreSQL, and MongoDB. My focuses are Core Web Vitals, accessibility, SEO, frontend and backend architecture, security, and performance at scale — not just writing code and components, but ensuring applications load fast, are accessible, secure, and rank well.
+          <p className="text-lg text-slate-600 dark:text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Experienced Salesforce Developer with Salesforce experience since 2023 and software development experience since 2019, holding 5+ certifications including Platform Developer I & II, Administrator, and MuleSoft Developer. Skilled in Apex, LWC, React, Visualforce, Aura, and API integration, with experience delivering end-to-end Salesforce solutions from business process design, architecture, development, and configuration to deployment. I have built a Sales Pipeline application and a Google Drive integration that reduced manual steps in customer registration by an estimated 15%. I build scalable, secure, and maintainable applications.
           </p>
 
           {/* CTA Buttons */}

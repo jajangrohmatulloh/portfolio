@@ -6,34 +6,84 @@ import { Badge } from "@/components/ui/badge";
 
 const skillCategories = [
   {
-    title: "Frontend Development",
+    title: "Salesforce Development",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2L2 7l10 5 10-5-10-5zm0 7v13m10-8l-10 5-10-5" />
       </svg>
     ),
     gradient: "from-blue-500 to-cyan-500",
-    skills: ["Next.js", "React", "Angular", "Vue.js", "Redux", "Pinia", "TailwindCSS", "Bootstrap", "SASS", "TypeScript", "JavaScript", "HTML", "CSS", "React Testing Library", "Micro Frontends", "Core Web Vitals", "WCAG", "SEO"],
+    skills: ["Apex", "Apex Trigger", "Apex Controller", "Apex Extension", "Apex Testing", "Queueable Apex", "Future", "Apex Scheduler", "Batch Apex", "Governor Limits", "SOQL", "SOSL", "LWC", "Aura Component", "Visualforce Page", "Visualforce Component", "SLDS", "JavaScript", "TypeScript", "HTML", "CSS", "Jest"],
   },
   {
-    title: "Backend Development",
+    title: "Integration & APIs",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9h8m-8 6h8M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" />
       </svg>
     ),
     gradient: "from-purple-500 to-pink-500",
-    skills: ["Spring Boot", "NestJS", "Express.js", "Java", "Go", "Node.js", "JUnit", "Mockito", "Jest", "REST API", "SOAP API", "gRPC", "GraphQL", "Microservices"],
+    skills: ["REST API", "SOAP API", "GraphQL", "gRPC", "Pub/Sub API", "Platform Events", "Change Data Capture", "Named Credentials", "XML", "Metadata", "MuleSoft", "AWS", "Heroku", "Messaging for In-App and Web"],
   },
   {
-    title: "Databases & Tools",
+    title: "Agentforce & AI",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 18h6M10 21h4M12 3a6 6 0 016 6v3.5a3.5 3.5 0 01-3.5 3.5h-5A3.5 3.5 0 016 12.5V9a6 6 0 016-6z" />
+      </svg>
+    ),
+    gradient: "from-violet-500 to-indigo-500",
+    skills: ["Agentforce", "Agent Builder", "MCPs", "Einstein", "Agentforce Vibes", "Claude Code", "Cursor", "GitHub Copilot"],
+  },
+  {
+    title: "DevOps, Tools & Practices",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7h16M4 12h10m-10 5h16" />
       </svg>
     ),
     gradient: "from-orange-500 to-yellow-500",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "AWS", "Supabase", "ESLint", "Vite", "Webpack", "Kafka", "Docker", "Git", "GitHub", "Jira", "Confluence", "Cursor", "Claude Code", "GitHub Copilot"],
+    skills: ["Salesforce DX", "Agentforce Vibes IDE", "Code Builder", "Classic Developer Console", "Web Console", "Change Sets", "Sandboxes", "Git", "GitHub", "Bitbucket", "Jenkins", "Copado", "GitHub Actions", "CI/CD", "System Designs", "SOLID Principles", "Design Patterns", "SDLC", "Agile", "Technical Documentation", "Jira", "Confluence", "Slack"],
+  },
+  {
+    title: "OmniStudio",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7zm3 3h10M7 13h6" />
+      </svg>
+    ),
+    gradient: "from-emerald-500 to-teal-500",
+    skills: ["OmniStudio", "OmniScripts", "Flex Cards", "DataRaptors", "Integration Procedures"],
+  },
+  {
+    title: "Other Languages & Backend",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-3h.01M17 15h.01" />
+      </svg>
+    ),
+    gradient: "from-rose-500 to-pink-500",
+    skills: ["Java", "Python", "Go", "Node.js", "React", "JUnit", "Mockito"],
+  },
+  {
+    title: "Administration & Declarative",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 16v-2m8-6h-2M6 12H4m12.95 6.95l-1.41-1.41M8.46 8.46L7.05 7.05m9.9 0l-1.41 1.41M8.46 15.54l-1.41 1.41" />
+      </svg>
+    ),
+    gradient: "from-sky-500 to-blue-500",
+    skills: ["Business Processes", "Flows", "Approval Processes", "Validation Rules", "Object Configuration", "Lightning App Builder", "Reports", "Dashboards", "Forecasts", "Users", "Profiles", "Roles", "Permission Sets", "Sharing Rules", "Data Import Wizard", "Data Export Wizard", "Data Loader"],
+  },
+  {
+    title: "Clouds & Products",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h10a4 4 0 004-4m-14-1V7a4 4 0 014-4h2a4 4 0 014 4v7m-8 0h8" />
+      </svg>
+    ),
+    gradient: "from-cyan-500 to-sky-500",
+    skills: ["Salesforce", "Salesforce Lightning", "Salesforce Classic", "Sales Cloud", "Service Cloud", "Experience Cloud", "Marketing Cloud Account Engagement", "Data 360", "Omni-Channel", "CTI", "Engagement Studio"],
   },
 ];
 
