@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -124,13 +123,12 @@ export function Header() {
                 key={link.href}
                 variant="ghost"
                 aria-current={activeSection === link.href ? "page" : undefined}
-                className={`cursor-pointer transition-all ${activeSection === link.href ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/20 hover:from-blue-700 hover:to-purple-700" : "hover:bg-slate-100 dark:hover:bg-slate-800"}`}
+                className={`cursor-pointer transition-all ${activeSection === link.href ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/20 hover:from-blue-700 hover:to-purple-700 hover:text-white" : "hover:bg-slate-100 dark:hover:bg-slate-800"}`}
                 onClick={() => scrollToSection(link.href)}
               >
                 {link.label}
               </Button>
             ))}
-            <ThemeToggle />
           </nav>
 
 
@@ -153,33 +151,20 @@ export function Header() {
               side="bottom"
               className="w-full rounded-t-[1.5rem] border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950 p-0 shadow-2xl"
             >
-              <div className="flex flex-col items-center gap-2 px-6 pt-4">
-                <div className="h-1.5 w-16 rounded-full bg-slate-200 dark:bg-slate-700" />
-                <div className="w-full text-center">
-                  <p id="mobile-navigation-title" className="text-sm font-semibold text-slate-900 dark:text-white">Navigation</p>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">Swipe down or tap outside to close</p>
-                </div>
-              </div>
-
-              <nav aria-label="Mobile navigation" className="grid gap-3 px-5 py-4">
+              <nav aria-label="Mobile navigation" className="grid gap-3 px-5 pb-4 pt-10">
                 {navLinks.map((link) => (
                   <button
                     key={link.href}
                     type="button"
                     onClick={() => scrollToSection(link.href)}
                     aria-current={activeSection === link.href ? "page" : undefined}
-                    className={`w-full rounded-3xl border px-5 py-4 text-left text-base font-medium transition cursor-pointer ${activeSection === link.href ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/20 hover:from-blue-700 hover:to-purple-700" : "border-slate-200 bg-slate-100 text-slate-900 hover:border-slate-300 hover:bg-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-700 dark:hover:bg-slate-800"}`}
+                    className={`w-full rounded-3xl border px-5 py-4 text-left text-base font-medium transition cursor-pointer ${activeSection === link.href ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/20 hover:from-blue-700 hover:to-purple-700 hover:text-white" : "border-slate-200 bg-slate-100 text-slate-900 hover:border-slate-300 hover:bg-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-700 dark:hover:bg-slate-800"}`}
                   >
                     {link.label}
                   </button>
                 ))}
               </nav>
 
-              <div className="border-t border-slate-200 px-5 py-4 dark:border-slate-800">
-                <div className="flex justify-center">
-                  <ThemeToggle showLabel className="max-w-[8rem]" />
-                </div>
-              </div>
             </SheetContent>
           </Sheet>
         </div>

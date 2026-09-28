@@ -48,7 +48,7 @@ const contactMethods = [
     ),
   },
   {
-    label: "Trailhead",
+    label: "Trailblazer",
     value: "salesforce.com/trailblazer/jajangrohmatulloh",
     href: "https://www.salesforce.com/trailblazer/jajangrohmatulloh",
     gradient: "from-blue-500 to-cyan-500",
