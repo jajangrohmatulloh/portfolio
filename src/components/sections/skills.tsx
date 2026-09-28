@@ -33,7 +33,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-emerald-500 to-teal-500",
-    skills: ["OmniStudio", "OmniScripts", "Flex Cards", "DataRaptors", "Integration Procedures"],
+    skills: ["OmniStudio", "Data Mapper/DataRaptors", "Integration Procedures", "Flexcards", "Omniscripts"],
   },
   {
     title: "Agentforce & AI",
