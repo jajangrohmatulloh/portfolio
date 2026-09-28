@@ -73,7 +73,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-sky-500 to-blue-500",
-    skills: ["Business Processes", "Flows", "Approval Processes", "Validation Rules", "Object Configuration", "Lightning App Builder", "Reports", "Dashboards", "Forecasts", "Users", "Profiles", "Roles", "Permission Sets", "Sharing Rules", "Data Import Wizard", "Data Export Wizard", "Data Loader"],
+    skills: ["Flows", "Approval Processes", "Validation Rules", "Object Configuration", "Lightning App Builder", "Reports", "Dashboards", "Forecasts", "Users", "Profiles", "Roles", "Permission Sets", "Sharing Rules", "Data Import Wizard", "Data Export Wizard", "Data Loader"],
   },
   {
     title: "Clouds & Products",
