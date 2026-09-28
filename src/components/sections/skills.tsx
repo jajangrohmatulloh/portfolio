@@ -53,7 +53,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-emerald-500 to-teal-500",
-    skills: ["OmniStudio", "Data Mapper", "Integration Procedures", "Flexcards", "Omniscripts","DataRaptors"],
+    skills: ["OmniStudio", "Data Mapper/DataRaptors", "Integration Procedures", "Flexcards", "Omniscripts"],
   },
   {
     title: "Other Languages & Backend",
