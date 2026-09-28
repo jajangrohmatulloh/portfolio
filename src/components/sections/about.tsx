@@ -43,7 +43,7 @@ export function AboutSection() {
             </span>
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Get to know more about me and my journey
+            Get to know more about me and my journey in Salesforce development
           </p>
         </motion.div>
 
