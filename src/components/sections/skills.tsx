@@ -6,24 +6,45 @@ import { Badge } from "@/components/ui/badge";
 
 const skillCategories = [
   {
-    title: "Solution Design & Architecture",
+    title: "Architecture & Design",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2L2 7l10 5 10-5-10-5zm0 7v13m10-8l-10 5-10-5" />
       </svg>
     ),
     gradient: "from-blue-500 to-cyan-500",
-    skills: ["Business Process Design", "System Designs", "Documentation"],
+    skills: ["System Designs", "SOLID Principles", "Design Patterns", "Technical Design Documentation"],
   },
   {
-    title: "Salesforce Clouds & Platform",
+    title: "Integration, APIs & Backend",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h10v10H7zM4 12h3M17 12h3M12 4v3M12 17v3" />
+      </svg>
+    ),
+    gradient: "from-orange-500 to-yellow-500",
+    skills: ["REST API", "SOAP API", "GraphQL", "gRPC", "Pub/Sub API", "Platform Events", "Change Data Capture", "Named Credentials", "Messaging for In-App and Web", "XML", "Metadata", "MuleSoft", "AWS", "Heroku", "Java", "Python", "Go", "Node.js", "JUnit", "Mockito"],
+  },
+  {
+    title: "Salesforce Development",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9h8m-8 6h8M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" />
       </svg>
     ),
     gradient: "from-purple-500 to-pink-500",
-    skills: ["Salesforce", "Salesforce Lightning", "Salesforce Classic", "Sales Cloud", "Service Cloud", "Financial Services Cloud", "Commerce Cloud", "Experience Cloud", "Marketing Cloud Account Engagement", "AppExchange", "Engagement Studio", "Data 360", "Chatter", "Omni-Channel", "CTI"],
+    skills: ["Apex", "Apex Trigger", "Apex Controller", "Apex Extension", "Apex Testing", "Queueable Apex", "Future", "Apex Scheduler", "Batch Apex", "Governor Limits", "SOQL", "SOSL", "LWC", "Aura Component", "Visualforce Page", "Visualforce Component", "SLDS", "React", "TypeScript", "JavaScript", "HTML", "CSS", "Jest"],
+  },
+  {
+    title: "Clouds & Platform",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 18h10a3 3 0 0 0 .5-5.96A5.5 5.5 0 0 0 6.5 11a4 4 0 0 0 .5 7Z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 9h6M9 12h6M9 15h4" />
+      </svg>
+    ),
+    gradient: "from-indigo-500 to-violet-500",
+    skills: ["Salesforce", "Salesforce Lightning", "Salesforce Classic", "Sales Cloud", "Service Cloud", "Financial Services Cloud", "Commerce Cloud", "Experience Cloud", "Marketing Cloud Account Engagement", "Engagement Studio", "Data 360", "Omni-Channel", "CTI", "AppExchange"],
   },
   {
     title: "OmniStudio",
@@ -33,7 +54,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-emerald-500 to-teal-500",
-    skills: ["OmniStudio", "OmniScripts", "Flex Cards", "DataRaptors", "Integration Procedures"],
+    skills: ["OmniStudio", "Data Mapper/DataRaptors", "Integration Procedures", "Flexcards", "Omniscripts"],
   },
   {
     title: "Agentforce & AI",
@@ -43,37 +64,27 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-violet-500 to-indigo-500",
-    skills: ["Agentforce", "Agent Builder", "MCPs", "Einstein", "Next Best Action", "ChatGPT", "Claude", "Gemini"],
+    skills: ["Agentforce", "Agent Builder", "MCPs", "Einstein", "Agentforce Vibes", "Cursor", "Claude Code", "GitHub Copilot"],
   },
   {
-    title: "Integration, Data & Analytics",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7h16M4 12h10m-10 5h16" />
-      </svg>
-    ),
-    gradient: "from-orange-500 to-yellow-500",
-    skills: ["MuleSoft", "AWS", "Heroku", "Data Import Wizard", "Data Export Wizard", "Data Loader", "Reports", "Dashboards", "Forecasts", "Tableau"],
-  },
-  {
-    title: "Configuration, Automation & Security",
+    title: "Data, Security & Declarative",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 16v-2m8-6h-2M6 12H4m12.95 6.95l-1.41-1.41M8.46 8.46L7.05 7.05m9.9 0l-1.41 1.41M8.46 15.54l-1.41 1.41" />
       </svg>
     ),
     gradient: "from-sky-500 to-blue-500",
-    skills: ["Flows", "Approval Processes", "Validation Rules", "Object Configuration", "Lightning App Builder", "Users", "Profiles", "Roles", "Permission Sets", "Sharing Rules"],
+    skills: ["Flows", "Approval Processes", "Validation Rules", "Object Configuration", "Lightning App Builder", "Users", "Profiles", "Roles", "Permission Sets", "Sharing Rules", "Data Import Wizard", "Data Export Wizard", "Data Loader", "Reports", "Dashboards", "Forecasts", "Tableau"],
   },
   {
-    title: "Delivery & Collaboration",
+    title: "DevOps & Delivery",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h10a4 4 0 004-4m-14-1V7a4 4 0 014-4h2a4 4 0 014 4v7m-8 0h8" />
       </svg>
     ),
     gradient: "from-cyan-500 to-sky-500",
-    skills: ["Change Sets", "Sandboxes", "Agile", "Jira", "Confluence", "Slack"],
+    skills: ["Salesforce DX", "Agentforce Vibes IDE", "Code Builder", "Classic Developer Console", "Web Console", "Change Sets", "Sandboxes", "SDLC", "CI/CD", "Git", "GitHub", "Bitbucket", "Jenkins", "Copado", "GitHub Actions", "Agile", "Jira", "Confluence", "Slack"],
   },
 ];
 

@@ -18,7 +18,7 @@ const experiences = [
     company: "Global Infotech Solution",
     role: "System Engineer L1 (Handled Salesforce)",
     period: "Feb 2023 – May 2024 • On-site",
-    description: "Designed a business process, architected solutions, and implemented them in Salesforce. Customized and developed a Salesforce application and integrated Google Drive, reducing manual processes by 15%. Authored technical documentation to understand product usage. Earned 5+ certifications (Salesforce Administrator, Salesforce Developer, and MuleSoft Developer).",
+    description: "Designed a business process, architected solutions, and implemented them in Salesforce. Customized and developed a Salesforce application and integrated Google Drive, reducing manual processes by 15%. Authored technical documentation to understand product usage. Earned 5+ certifications (Salesforce Administrator, Salesforce Developer, and MuleSoft Developer). Built a mobile and web application using React Native, React, and Node.js.",
   },
 ];
 

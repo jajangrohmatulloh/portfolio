@@ -10,7 +10,7 @@ const projects = [
     name: "SALES PIPELINE",
     tagline: "Track your deals and boost team productivity",
     description: "A customer management application — an internal web-based Salesforce tool enabling sales teams to manage deal pipelines, improve cross-team collaboration, and increase overall productivity through business process design, workflow automation, and streamlined pipeline operations.",
-    tags: ["Salesforce", "Salesforce Technical Architecture", "Apex", "Flow", "JavaScript", "API Integration"],
+    tags: ["Salesforce", "Technical Architecture", "Apex", "Flow", "JavaScript", "API Integration"],
     gradient: "from-indigo-500 to-purple-500",
     shadowColor: "shadow-indigo-500/30",
     url: null,
