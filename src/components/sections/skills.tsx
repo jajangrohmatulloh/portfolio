@@ -46,16 +46,6 @@ const skillCategories = [
     skills: ["Salesforce DX", "Agentforce Vibes IDE", "Code Builder", "Classic Developer Console", "Web Console", "Change Sets", "Sandboxes", "Git", "GitHub", "Bitbucket", "Jenkins", "Copado", "GitHub Actions", "CI/CD", "System Designs", "SOLID Principles", "Design Patterns", "SDLC", "Agile", "Technical Documentation", "Jira", "Confluence", "Slack"],
   },
   {
-    title: "OmniStudio",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7zm3 3h10M7 13h6" />
-      </svg>
-    ),
-    gradient: "from-emerald-500 to-teal-500",
-    skills: ["OmniStudio", "OmniScripts", "Flex Cards", "DataRaptors", "Integration Procedures"],
-  },
-  {
     title: "Other Languages & Backend",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +73,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-cyan-500 to-sky-500",
-    skills: ["Salesforce", "Salesforce Lightning", "Salesforce Classic", "Sales Cloud", "Service Cloud", "Experience Cloud", "Marketing Cloud Account Engagement", "Data 360", "Omni-Channel", "CTI", "Engagement Studio"],
+    skills: ["Salesforce", "Salesforce Lightning", "Salesforce Classic", "Sales Cloud", "Service Cloud", "Experience Cloud", "Marketing Cloud Account Engagement", "Data 360", "OmniStudio", "OmniScripts", "Flex Cards", "DataRaptors", "Integration Procedures", "Omni-Channel", "CTI", "Engagement Studio"],
   },
 ];
 
