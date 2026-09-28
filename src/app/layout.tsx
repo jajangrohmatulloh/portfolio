@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Jajang Rohmatulloh",
   },
   description:
-    "Experienced Salesforce Developer with Salesforce experience since 2023 and software development experience since 2019, holding 5+ certifications including Platform Developer I & II, Administrator, and MuleSoft Developer. Skilled in Apex, LWC, React, Visualforce, Aura, and API integration, with experience delivering end-to-end Salesforce solutions from business process design, architecture, development, and configuration to deployment. I have built a Sales Pipeline application and a Google Drive integration that reduced manual steps in customer registration by an estimated 15%. I build scalable, secure, and maintainable applications.",
+    "Experienced Salesforce Developer with Salesforce experience since 2023 and software development experience since 2019, holding 5+ certifications including Platform Developer I & II, Administrator, and MuleSoft Developer. Skilled in Apex, LWC, React, Visualforce, Aura, and API integration, with experience delivering Salesforce solutions from development, configuration to deployment, including a Sales Pipeline application with a Google Drive integration that reduced manual steps in customer registration by an estimated 15%. Backed by a strong full stack foundation (React, Node.js, Java, JavaScript), I build scalable, secure, and maintainable applications.",
   keywords: [
     "Jajang Rohmatulloh",
     "Salesforce Developer",
