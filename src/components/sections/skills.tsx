@@ -28,7 +28,7 @@ const skillCategories = [
       </svg>
     ),
     gradient: "from-orange-500 to-yellow-500",
-    skills: ["REST API", "SOAP API", "GraphQL", "gRPC", "Pub/Sub API", "Platform Events", "Change Data Capture", "Named Credentials", "Messaging for In-App and Web", "XML", "Metadata", "MuleSoft", "AWS", "Heroku", "Java", "Python", "Go", "Node.js", "JUnit", "Mockito"],
+    skills: ["REST API", "SOAP API", "GraphQL", "gRPC", "Pub/Sub API", "Webhook", "Platform Events", "Change Data Capture", "Named Credentials", "Messaging for In-App and Web", "XML", "Metadata", "MuleSoft", "AWS", "Heroku", "Java", "Python", "Go", "Node.js", "JUnit", "Mockito"],
   },
   {
     title: "Salesforce Development",
