@@ -51,7 +51,7 @@ const skillCategories = [
       "Governor Limits",
       "SOQL",
       "SOSL",
-      "LWC",
+      "Lightning Web Component/LWC",
       "Aura Component",
       "Visualforce Page",
       "Visualforce Component",
